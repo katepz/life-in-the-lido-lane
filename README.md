@@ -104,11 +104,12 @@ Users will be able to view information on selected lidos to include: location, o
 
 ### Could-Have User Stories
 
-**User Story 1:** As a site user I can click on a map link so that I can get directions.
+**User Story 1:** As a site user I can add and remove a lido to a wish-list so that I can remember where I would like to go.
 
-- Google maps embedded in an iframe on each lido card.
+- a 'I'd like to visit' button appears on each lido detail page.
+- choices are stored in the user's profile and are accessible when logged in.
+- users can delete choices once stored.
 
-- 
 **User Story 2:** As a site admin I can create draft content so that I can finish at a later time. 
 
 - Given a logged in superuser, they can save a draft blog post.
