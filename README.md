@@ -1,43 +1,128 @@
-# Project Title
+# Life In The Lido Lane
 
 ## Overview
 
 ### Purpose
-A brief description of the project's purpose, what it aims to achieve, and the value it provides to the users.  
-**Guidance:** Begin filling out this section during Phase 1: Ideation & Initial Setup. Clearly articulate the main goal of your project, what it aims to achieve, and how it will provide value to your target audience.
+This project is intended to give a useful site for open water swimmers looking to visit and swim in the UK's wonderful lidos. It will also give up to date safety advice for new and seasoned open water swimmers.
+
 
 ### Target Audience
-Identify the target audience for your website and explain why this audience will benefit from the project.  
-**Guidance:** Use this section to identify who will benefit from your project and why. This should be informed by your user stories and overall project objectives.
+Following a huge surge in the popularity of open water swimming, particularly in the post covid period, the number of potential site users is growing rapidly. The main target audience will be existing open water swimmers looking for information on UK lido sites and locations. Smaller audiences will be tourists and families looking for local activities and novice open water swimmers looking for safe environments to begin their swimming journeys.
+
+Users will be able to view information on selected lidos to include: location, opening times, season length, costs, other facilities eg cafes/changing areas as well as a brief description.
 
 ## User Stories
 
 ### Must-Have User Stories
-- **User Story 1:** Briefly describe the must-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the must-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+**User Story 1:** As a site user I can view a list of info cards so that I can choose the one I want to view in more detail.
+- Several posts are displayed on the home page
 
-(Include all prioritized must-have features)  
-**Guidance:** Draft the user stories during Phase 1: Ideation & Initial Setup and update them as you complete Phase 2: Must User Stories Implementation & Testing. Document each must-have feature here along with its acceptance criteria.
+**User Story 2:** As a site user I can click on an info card so that I can see the full description.
+
+- When an info card is clicked a detailed view is displayed.
+
+**User Story 3:** As a site user I can register an account so that I can comment on lido cards.
+
+- Given an email a user can register an account.
+- Then the user can log in.
+- When the user is logged in they can comment.
+
+**User Story 4:** As a site user/admin I can login so that I can access different content.
+
+- Login form with feedback and link.
+
+**User Story 5:** As a site admin/user I can log out so that leave the site with my account logged out.
+
+- Log out button with feedback.
+
+**User Story 6:** As a site admin I can create, read, update & delete lido info cards so that I can manage the site content.
+
+- Given a logged in superuser, they can create a lido card.
+- Given a logged in superuser, they can read a lido card.
+- Given a logged in superuser, they can update a lido card.
+- Given a logged in superuser, they can delete a lido card.
+
+**User Story 7:** As a site user I can comment on a lido card so that I can be involved in the dialogue.
+
+- As a logged in user I can comment on lido card.
+- When a user comment is approved, then a user can reply.
+- Given more than one comment then there is a conversation thread.
+
+**User Story 8:** As a site user I can easily navigate the site so that I can find the pages and info I need.
+
+- The nav bar is easily visible on all pages.
+- The nav bar works intuitively.
+- The nav bar indicates which page is active.
+
+**User Story 9:** As a site user I can modify or delete my input on a lido card so that be involved.
+
+- Given a logged in user, they can modify their comment.
+- Given a logged in user, they can delete their comment.
+
+**User Story 10:** As a site owner/site user I can view user comments so that I can see the dialogue.
+
+- Given one or more user comments the admin can view them.
+- A site user can click on the comment thread to read the conversation.
+
+**User Story 11:** As a site owner I can add or update the Safety info page so that info is kept up to date.
+
+- The Safety app appears in the admin panel.
+- The admin user can access the admin panel.
+
+**User Story 12:** As a site user I can click on a link so that I can view safety advice & guidance.
+
+- When the Safety link is clicked the Safety page can be viewed
+
+**User Story 13:** As a site owner I can add and edit the About page so that content is visible and up to date.
+
+- The About app appears in the admin panel.
+
+**User Story 14:** As a site user I can click on a link so that I can view the site About page.
+
+- When the About link is clicked the About page can be viewed.
+
+**User Story 15:** As a site user I can submit a form so that I can suggest a new lido location.
+
+- Form to submit suggestions appears on the About page
+
 
 ### Should-Have User Stories
-- **User Story 1:** Briefly describe the should-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the should-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+**User Story 1:** As a site user I can see paginated info cards so that it is easier to navigate through them.
 
-(Include all prioritized should-have features)  
-**Guidance:** Document the secondary features that you aim to implement in Phase 3: Should User Stories Implementation & Any Advanced Features. Include clear acceptance criteria for each.
+- Multiple posts are paginated. 
+
+**User Story 2:** As a site user I can click on a link so that I can open a lido's webpage in a separate browser page.
+
+- a link to each lido's website appears on the info card.
+- when clicked the page opens in a separate browser page.
+
+**User Story 3:** As a site admin I can approve or reject comments so that I can control site content and filter out inappropriate comments.
+
+- Given a logged in admin user, they can approve a comment.
+- Given a logged in admin user, they can reject a comment.
+
 
 ### Could-Have User Stories
-- **User Story 1:** Briefly describe the could-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the could-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
 
-(Include any could-have features considered for future enhancements)  
-**Guidance:** Document any optional features that are nice to have but not essential.
+**User Story 1:** As a site user I can click on a map link so that I can get directions.
+
+- Google maps embedded in an iframe on each lido card.
+
+- 
+**User Story 2:** As a site admin I can create draft content so that I can finish at a later time. 
+
+- Given a logged in superuser, they can save a draft blog post.
+- Then they can finish the content at a later time.
+
+**User Story 3:** As a site user I can store suggestions in the database so that I can manage them.
+
+- suggested locations stored in database to be read.
+- mark requests as read when dealt with.
+
+**User Story 4:** As a site user I can view pictures of featured lidos so that I get a good experience on landing on the page.
+
+- A gallery carousel appears on the landing page
+
 
 ## Design Decisions
 
