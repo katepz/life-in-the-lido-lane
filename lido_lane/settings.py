@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'lidos',
+    'about',
 ]
 
 MIDDLEWARE = [
