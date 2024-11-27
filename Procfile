@@ -1,0 +1,1 @@
+web: gunicorn lido_lane.wsgi
