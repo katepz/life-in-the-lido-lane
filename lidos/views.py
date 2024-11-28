@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views import generic
+from .models import Lido
 
 # Create your views here.
-class HomePage(TemplateView):
-    """
-    Displays the home page
-    """
-    template_name = 'index.html'
+class LidoList(generic.ListView):
+    queryset = Lido.objects.filter(status=1)
+    template_name = "lido_list.html"
