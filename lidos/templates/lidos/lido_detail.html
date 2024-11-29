@@ -29,6 +29,7 @@
                 <p class="card-text">
                     {{ lido.description | safe }}
                 </p>
+                <a href="{{lido.website }}" target="_blank">Website</a>
             </div>
         </div>
     </div>
@@ -78,7 +79,7 @@
                 {{ comment_form | crispy }}
                 {% csrf_token %}
                 <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-            </form>
+                </form>
             {% else %}
             <p>Log in to leave a comment</p>
             {% endif %}

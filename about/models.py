@@ -10,3 +10,12 @@ class About(models.Model):
 
     def __str__(self):
         return self.title
+
+class Suggestion(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    lido_idea = models.TextField()
+    read = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Lido suggestion from {self.name}"
