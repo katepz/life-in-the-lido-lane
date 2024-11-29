@@ -18,7 +18,7 @@
                                     <p class="author">Author: {{ lido.user_id }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'lido_detail' lido.slug %}" class="post-link">
                                 <h2 class="card-title">{{ lido.name }}</h2>
                                 <p class="card-text">{{ lido.highlight }}</p>
                             </a>
