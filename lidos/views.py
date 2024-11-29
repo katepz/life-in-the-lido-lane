@@ -21,9 +21,14 @@ def lido_detail(request, slug):
     """
     queryset = Lido.objects.filter(status=1)
     lido = get_object_or_404(queryset, slug=slug)
+    comments = lido.comments.all().order_by("-created_on")
+    comment_count = lido.comments.filter(is_approved=True).count()
 
     return render(
         request,
         "lidos/lido_detail.html",
-        {"lido": lido, "info": "Information:"}
+        {"lido": lido, 
+        "info": "Information:", 
+        "comments": comments,
+        "comment_count": comment_count, }
     )
