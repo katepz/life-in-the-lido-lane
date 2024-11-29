@@ -1,6 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.contrib import messages
 from .models import Lido
+from .forms import CommentForm
+
 
 # Create your views here.
 class LidoList(generic.ListView):
@@ -24,11 +27,27 @@ def lido_detail(request, slug):
     comments = lido.comments.all().order_by("-created_on")
     comment_count = lido.comments.filter(is_approved=True).count()
 
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.user_id = request.user
+            comment.lido = lido
+            comment.save()
+            messages.add_message(
+                request, messages.SUCCESS,'Comment submitted and awaiting approval'
+            )
+
+    comment_form = CommentForm()
+
     return render(
         request,
         "lidos/lido_detail.html",
-        {"lido": lido, 
-        "info": "Information:", 
-        "comments": comments,
-        "comment_count": comment_count, }
+        {
+            "lido": lido, 
+            "info": "Information:", 
+            "comments": comments,
+            "comment_count": comment_count,
+            "comment_form": comment_form,
+        }
     )
