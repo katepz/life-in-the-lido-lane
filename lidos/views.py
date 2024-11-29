@@ -25,5 +25,5 @@ def lido_detail(request, slug):
     return render(
         request,
         "lidos/lido_detail.html",
-        {"lido": lido}
+        {"lido": lido, "info": "Information:"}
     )
