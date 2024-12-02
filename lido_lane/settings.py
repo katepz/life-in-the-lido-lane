@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'lidos',
     'about',
+    'safety_info',
 ]
 
 SITE_ID = 1
