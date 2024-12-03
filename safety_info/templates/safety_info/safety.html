@@ -23,15 +23,15 @@
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags
                 to iterate through each comment in comments -->
-                {% for safetysuggestion in safetysuggestions %}
-                <div class="p-2 comments {% if not safetysuggestion.is_approved and safetysuggestion.user_id == user %}faded{% elif not safetysuggestion.is_approved %} d-none{% endif %}">
+                {% for suggestion in safetysuggestion %}
+                <div class="p-2 comments {% if not suggestion.is_approved and suggestion.user_id == user %}faded{% elif not suggestion.is_approved %} d-none{% endif %}">
                 <p class="font-weight-bold">
-                    {{ safetysuggestion.user_id }}<span class="font-weight-normal">{{ safetysuggestion.created_on }}</span> wrote:
+                    {{ suggestion.user_id }}<span class="font-weight-normal">{{ suggestion.created_on }}</span> wrote:
                 </p>
                 <div id="comment{{ comment.id }}">
-                    {{ safetysuggestion.tip | linebreaks }}
+                    {{ suggestion.tip | linebreaks }}
                 </div>
-                {% if not safetysuggestion.is_approved and safetysuggestion.user_id == user %}
+                {% if not suggestion.is_approved and suggestion.user_id == user %}
                 <p class="approval">
                     This safety tip is awaiting fact-checking
                 </p>
