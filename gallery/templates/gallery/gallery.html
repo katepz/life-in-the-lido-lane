@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+{% load crispy_forms_tags %}
+
 <div class="container mt-5">
     <div class="row">
         <div class="col-4 text-center">
@@ -20,5 +22,47 @@
         <p class="text-end"><em>Created on: {{ gallery.created_on }}</em></p>
         </div>
     </div>
-</div>
+    <!-- Displaying user photos -->
+    <div class="row">
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <h3>Member photos:</h3>
+            <div class="card-body">
+                <!-- We want a for loop inside the empty control tags
+                to iterate through each comment in comments -->
+                {% for photo in photos %}
+                <div class="p-2 comments {% if not photo.is_approved and photo.user_id == user %}faded{% elif not photo.is_approved %} d-none{% endif %}">
+                <p class="font-weight-bold">
+                    {{ photo.user_id }}<span class="font-weight-normal">{{ photo.updated__on }}</span> wrote:
+                </p>
+                <div id="comment{{ comment.id }}">
+                    {{ photo.caption | linebreaks }}
+                </div>
+                {% if not photo.is_approved and photo.user_id == user %}
+                <p class="approval">
+                    Thanks, we'll review your photo and display it asap.
+                </p>
+                {% endif %}
+                </div>
+                <!-- Our for loop ends here -->
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Creating New Safety tips -->
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+            {% if user.is_authenticated %}
+                <h3>Uplaod a photo:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form id="tipForm" method="post" style="margin-top: 1.3em;">
+                {{ photo_form | crispy }}
+                {% csrf_token %}
+                <button id="suggestButton" type="submit" class="btn btn-signup btn-lg">Upload</button>
+                </form>
+            {% else %}
+            <p>Log in to upload a photo.</p>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div> 
 {% endblock content %}
