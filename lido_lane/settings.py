@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'lidos',
     'about',
     'safety_info',
+    'gallery',
 ]
 
 SITE_ID = 1
