@@ -13,7 +13,7 @@ def gallery_page(request):
     photos = Photo.objects.all().order_by('-uploaded_at')
 
     if request.method == "POST":
-        photo_form = PhotoForm(data=request.POST)
+        photo_form = PhotoForm(request.POST, request.FILES)
         if  photo_form.is_valid():
             photo = photo_form.save(commit=False)
             photo.user_id = request.user

@@ -34,6 +34,13 @@
                 <p class="font-weight-bold">
                     {{ photo.user_id }}<span class="font-weight-normal">{{ photo.updated__on }}</span> wrote:
                 </p>
+                <div class="image-container">
+                    {% if "placeholder" in photo.image.url %}
+                    <img class="card-img-top" src="{% static 'images/jubilee.jpg' %}" alt="placeholder image">
+                    {% else %}
+                    <img class="card-img-top" src=" {{ photo.image.url }}" alt="{{ photo.caption }}">
+                    {% endif %}
+                </div>
                 <div id="comment{{ comment.id }}">
                     {{ photo.caption | linebreaks }}
                 </div>
@@ -47,13 +54,13 @@
                 {% endfor %}
             </div>
         </div>
-        <!-- Creating New Safety tips -->
+        <!-- Uploading New Photos -->
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
             {% if user.is_authenticated %}
                 <h3>Uplaod a photo:</h3>
                 <p>Posting as: {{ user.username }}</p>
-                <form id="tipForm" method="post" style="margin-top: 1.3em;">
+                <form id="tipForm" method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
                 {{ photo_form | crispy }}
                 {% csrf_token %}
                 <button id="suggestButton" type="submit" class="btn btn-signup btn-lg">Upload</button>
