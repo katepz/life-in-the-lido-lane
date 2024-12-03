@@ -10,7 +10,7 @@ def safety_info(request):
     Renders the safety page
     """
     safetyinfo = SafetyInfo.objects.all().order_by('-created_on').first()
-    tips = SafetySuggestion.objects.all().order_by("tip")
+    safetysuggestion = SafetySuggestion.objects.all().order_by("tip")
 
     if request.method == "POST":
         safetysuggestion_form = SafetySuggestionForm(data=request.POST)
@@ -28,6 +28,7 @@ def safety_info(request):
         "safety_info/safety.html",
         {
             "safetyinfo": safetyinfo, 
+            "safetysuggestion": safetysuggestion,
             "safetysuggestion_form": safetysuggestion_form,
         },
     )
