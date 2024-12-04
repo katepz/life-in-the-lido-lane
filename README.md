@@ -1,9 +1,11 @@
+![Logo](static/images/logomed.png)
+
 # Life In The Lido Lane
 
 ## Overview
 
 ### Purpose
-This project is intended to give a useful site for open water swimmers looking to visit and swim in the UK's wonderful lidos. It will also give up to date safety advice for new and seasoned open water swimmers.
+This project is intended to give a useful site for open water swimmers looking to visit and swim in the UK's wonderful lidos. It will also give up to date safety advice for new and seasoned open water swimmers. Site users have the opportunity to sign up and, when logged in, they can comment on each of the featured lidos, giving details of a visit or asking a question. They will be able to update or delete this input. Once logged in site users will also be able to upload photos of any lido and, once approved these will be displayed on the gallery page. Any site visitor will be able to suggest a lido to feature without the need for signing up.
 
 
 ### Target Audience
@@ -54,7 +56,7 @@ Users will be able to view information on selected lidos to include: location, o
 - The nav bar works intuitively.
 - The nav bar indicates which page is active.
 
-**User Story 9:** As a site user I can modify or delete my input on a lido card so that be involved.
+**User Story 9:** As a site user I can modify or delete my input on a lido card so that I be involved in the site dialogue.
 
 - Given a logged in user, they can modify their comment.
 - Given a logged in user, they can delete their comment.
@@ -76,6 +78,7 @@ Users will be able to view information on selected lidos to include: location, o
 **User Story 13:** As a site owner I can add and edit the About page so that content is visible and up to date.
 
 - The About app appears in the admin panel.
+- The admin user can access the admin panel.
 
 **User Story 14:** As a site user I can click on a link so that I can view the site About page.
 
@@ -84,6 +87,11 @@ Users will be able to view information on selected lidos to include: location, o
 **User Story 15:** As a site user I can submit a form so that I can suggest a new lido location.
 
 - Form to submit suggestions appears on the About page
+
+**User Story 16:** As a site user I can receive notifications so that I know that my input has been valid.
+
+- notifications appear after an input
+- notifications appear after signingin/signing out
 
 
 ### Should-Have User Stories
@@ -100,6 +108,11 @@ Users will be able to view information on selected lidos to include: location, o
 
 - Given a logged in admin user, they can approve a comment.
 - Given a logged in admin user, they can reject a comment.
+
+**User Story 4:** As a site user I can add a safety tip so that I can take part in the project.
+
+- when logged in a user can add a suggested safety tip for approval.
+- once approved this appears on the safety page.
 
 
 ### Could-Have User Stories
@@ -123,6 +136,17 @@ Users will be able to view information on selected lidos to include: location, o
 **User Story 4:** As a site user I can view pictures of featured lidos so that I get a good experience on landing on the page.
 
 - A gallery carousel appears on the landing page
+
+**User Story 5:** As a site owner I can manage photo uploads so that I can approve acceptable content only.
+
+- gallery app appears in admin panel.
+- once approved, images appear on the gallery page.
+
+**User Story 6:** As a site user I can upload a photo so that I can share my experiences.
+
+- a form enables me to upload a photo
+- my uploaded photo appears on the site
+
 
 
 ## Design Decisions
