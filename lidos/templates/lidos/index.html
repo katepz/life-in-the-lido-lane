@@ -4,6 +4,10 @@
 
 <!-- index.html content starts here -->
 <div class="container-fluid">
+    <div class="col-8 mx-auto ">
+        <h1 class="main-text-color adlam-display-regular justify-content-center">Welcome to our Lido Site.</h1>
+        <p class=" main-text-color abeezee-regular">Click on the name of the lido you would to find out about. Explore other pages to suggest a lido to feature or upload one of your own images.</p>
+    </div>
     <div class="row"> 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
@@ -16,11 +20,11 @@
                                 <img class="card-img-top img-fluid" src="{{ lido.lido_image.url }}" alt="Image of {{ lido.name }}">
                             </div>
                             <a href="{% url 'lido_detail' lido.slug %}" class="post-link">
-                                <h2 class="card-title adlam-display-regular">{{ lido.name }}</h2>
-                                <p class="card-text abeezee-regular">{{ lido.highlight }}</p>
+                                <h2 class="card-title adlam-display-regular main-text-color">{{ lido.name }}</h2>
+                                <p class="card-text abeezee-regular main-text-color">{{ lido.highlight }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6 adlam-display-regular">Added on: {{ lido.created_on}}
+                            <p class="card-text h6 adlam-display-regular main-text-color">Added on: {{ lido.created_on}}
                             </p>
                         </div>
                     </div>

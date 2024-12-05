@@ -26,7 +26,7 @@ body {
 }
 
 .main-bg {
-    background-color: #f0f0f2;
+    background-color: #aeb5bf;
 }
 
 .card {
@@ -84,11 +84,6 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
 }
 
 .post-link {
@@ -99,6 +94,13 @@ body {
 .post-link:hover,
 .page-link {
     color: #f24607;
+}
+
+.page-link{
+    color:#48cad9;
+    background-color: #8c6c5a;
+    border-color: #48cad9;
+    border-radius: 5px;
 }
 
 .post-title {
@@ -113,14 +115,14 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
-    color: #fff;
+    background-color: #8c6c5a;
+    color: #48cad9;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+    background-color: #48cad9;
+    color: #8c6c5a;
 }
 
 .link {
@@ -140,9 +142,10 @@ body {
     background: transparent;
 }
 
-.btn-delete {
-    color: #fff;
-    background: #E84610;
+.btn-delete,
+.btn-suggest {
+    color: #8c6c5a;
+    background: #48cad9;
 }
 
 .btn-like:hover,
@@ -170,10 +173,6 @@ body {
     text-decoration: underline;
 }
 
-/* h2 {
-    color: #f24607;
-} */
-
 .adlam-display-regular {
     font-family: "ADLaM Display", serif;
     font-weight: 400;
@@ -194,5 +193,17 @@ body {
 
 .ext-link {
     text-decoration: none;
-    color: #f24607
+    color: #f0f0f2
+}
+
+.footer {
+    color: #8c6c5a;
+}
+
+.main-text-color {
+    color: #f0f0f2 ;
+}
+
+.sec-text-color {
+    color:black;
 }

@@ -90,7 +90,7 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                <div class="alert {{ message.tags }} alert-dismissible fade show main-text-color" id="msg" role="alert">
                 {{ message | safe }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -100,9 +100,9 @@
     </div>
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
-        <p class="text-end m-3">You're logged in as {{ user }}.</p>
+        <p class="text-end m-3 main-text-color">{{ user }}, thanks for logging in.</p>
         {% else %}
-        <p class="text-end m-3">You're not logged in yet!</p>
+        <p class="text-end m-3 main-text-color">Log in to share your views.</p>
         {% endif %}
 
         {% block content %}
@@ -112,13 +112,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Life in the Lido Lane</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
-        </p>
+    <footer class="footer mt-auto py-3 bg-blue">
+        <p class="m-0 text-center footer">Life in the Lido Lane</p>
+        <p class ='m-0 text-center footer'>Keep an eye here for socials in the future</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
