@@ -8,7 +8,7 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ lido.name }}</h1>
+                <h1 class="post-title adlam-display-regular">{{ lido.name }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ lido.user_id }} | {{ lido.created_on }}</p>
             </div>
@@ -22,14 +22,14 @@
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
+            <div class="card-body abeezee-regular">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <h2>{{ info }}</h2>
                 <p class="card-text">
                     {{ lido.description | safe }}
                 </p>
-                <a href="{{lido.website }}" target="_blank">Website</a>
+                <a href="{{lido.website }}" target="_blank" class="ext-link">Website</a>
             </div>
         </div>
     </div>

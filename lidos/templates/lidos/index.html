@@ -16,11 +16,11 @@
                                 <img class="card-img-top img-fluid" src="{{ lido.lido_image.url }}" alt="Image of {{ lido.name }}">
                             </div>
                             <a href="{% url 'lido_detail' lido.slug %}" class="post-link">
-                                <h2 class="card-title">{{ lido.name }}</h2>
-                                <p class="card-text">{{ lido.highlight }}</p>
+                                <h2 class="card-title adlam-display-regular">{{ lido.name }}</h2>
+                                <p class="card-text abeezee-regular">{{ lido.highlight }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ lido.created_on}}
+                            <p class="card-text text-muted h6 adlam-display-regular">Added on: {{ lido.created_on}}
                             </p>
                         </div>
                     </div>

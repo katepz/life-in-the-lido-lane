@@ -21,7 +21,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=ADLaM+Display&display=swap" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -35,11 +37,11 @@
 
 <body class="d-flex flex-column h-100 main-bg">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <!-- Navigation --> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue" >
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="{% static 'images/logomed.png' %}" alt="logo">
+                <img src="{% static 'images/logo2.png' %}" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,36 +50,36 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %} color-me" aria-current="page"
+                            href="{% url 'home' %}" style="color: #8c6c5a;">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == about_url %}active{%endif%}" aria-current="page"
-                            href="{% url 'about' %}">About</a>
+                            href="{% url 'about' %}" style="color: #8c6c5a;">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == safety_url %}active{%endif%}" aria-current="page"
-                            href="{% url 'safety' %}">Safety</a>
+                            href="{% url 'safety' %}" style="color: #8c6c5a;">Safety</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == gallery_url %}active{%endif%}" aria-current="page"
-                            href="{% url 'gallery' %}">Gallery</a>
+                            href="{% url 'gallery' %}" style="color: #8c6c5a;">Gallery</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}" style="color: #8c6c5a;">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_signup' %}">Register</a>
+                            href="{% url 'account_signup' %}" style="color: #8c6c5a;">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}" style="color: #8c6c5a;">Login</a>
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
+                <span class="navbar-text" style="color: #8c6c5a;">
                     Love, Live, Lido
                 </span>
             </div>
