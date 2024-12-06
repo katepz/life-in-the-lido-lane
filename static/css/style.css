@@ -26,7 +26,7 @@ body {
 }
 
 .main-bg {
-    background-color: #aeb5bf;
+    background-color: #474752;
 }
 
 .card {
@@ -67,8 +67,8 @@ body {
 }
 
 .masthead-text {
-    background-color: #8c6c5a;
-    color: #48cad9;
+    background-color: #735949;
+    color: #54eeff;
     position: relative;
 }
 
@@ -97,9 +97,9 @@ body {
 }
 
 .page-link{
-    color:#48cad9;
-    background-color: #8c6c5a;
-    border-color: #48cad9;
+    color:#54eeff;
+    background-color: #735949;
+    border-color: #54eeff;
     border-radius: 5px;
 }
 
@@ -115,14 +115,14 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #8c6c5a;
-    color: #48cad9;
+    background-color: #735949;
+    color: #54eeff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #48cad9;
-    color: #8c6c5a;
+    background-color: #54eeff;
+    color: #735949;
 }
 
 .link {
@@ -144,13 +144,13 @@ body {
 
 .btn-delete,
 .btn-suggest {
-    color: #8c6c5a;
-    background: #48cad9;
+    color: #735949;
+    background: #54eeff;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #f24607;
     background: transparent;
     border: none;
 }
@@ -166,7 +166,7 @@ body {
 /* added styling to override bootstrap*/
 
 .bg-blue {
-    background-color: #48cad9;
+    background-color: #54eeff;
 }
 
 .active {
@@ -192,18 +192,21 @@ body {
 }
 
 .ext-link {
-    text-decoration: none;
-    color: #f0f0f2
+    color: #54eeff;
 }
-
-.footer {
-    color: #8c6c5a;
-}
-
 .main-text-color {
-    color: #f0f0f2 ;
+    text-decoration: none;
+    color: #f0f0f2;
+}
+
+.footer-text {
+    color: #735949;
 }
 
 .sec-text-color {
     color:black;
+}
+
+h2 {
+    color:#f0f0f2;
 }
