@@ -11,20 +11,20 @@
         </div>
         <div class="col-12 col-md-8">
             <!-- Title goes between these h2 tags -->
-            <h2>{{ safetyinfo.title }}</h2>
+            <h2 class="adlam-display-regular">{{ safetyinfo.title }}</h2>
             <!-- Content goes directly underneath this -->
-            <p>{{ safetyinfo.description | safe}}</p>
+            <p class="abeezee-regular">{{ safetyinfo.description | safe}}</p>
         </div>
     </div>
     <!-- Displaying Safety tips -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Safety Tips:</h3>
-            <div class="card-body">
+            <h3 class="adlam-display-regular">Safety Tips:</h3>
+            <div class="card-body abeezee-regular">
                 <!-- We want a for loop inside the empty control tags
                 to iterate through each comment in comments -->
                 {% for suggestion in safetysuggestion %}
-                <div class="p-2 comments {% if not suggestion.is_approved and suggestion.user_id == user %}faded{% elif not suggestion.is_approved %} d-none{% endif %}">
+                <div class=" abeezee-regular p-2 comments {% if not suggestion.is_approved and suggestion.user_id == user %}main-text-color faded{% elif not suggestion.is_approved %} d-none{% endif %}">
                 <p class="font-weight-bold">
                     {{ suggestion.user_id }}<span class="font-weight-normal">{{ suggestion.created_on }}</span> wrote:
                 </p>
@@ -45,8 +45,8 @@
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
             {% if user.is_authenticated %}
-                <h3>Suggest a safety tip:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <h3 class="adlam-display-regular">Suggest a safety tip:</h3>
+                <p class="abeezee-regular">Posting as: {{ user.username }}</p>
                 <form id="tipForm" method="post" style="margin-top: 1.3em;">
                 {{ safetysuggestion_form | crispy }}
                 {% csrf_token %}
