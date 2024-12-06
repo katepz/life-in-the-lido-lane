@@ -1,4 +1,4 @@
-![Logo](static/images/logomed.png)
+![Logo](static/images/readme/newlogoreadme.png)
 
 # Life In The Lido Lane
 
@@ -218,6 +218,7 @@ Retest fo colour blind safe:
 
 ![Colour palette](static/images/readme/colourblindsafe3.JPG)
 
+Project colours have been adjusted to reflect the new colour palette. Logo files have also been adjusted.
 
 #### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
