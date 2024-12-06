@@ -34,7 +34,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
+CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
+CLOUDINARY = {
+    'secure': True,
+}
 
 ALLOWED_HOSTS = ['8000-katepz-lifeinthelidolan-tfzk8dkgp4b.ws.codeinstitute-ide.net', '.herokuapp.com']
 CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
