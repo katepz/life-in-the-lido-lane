@@ -8,32 +8,24 @@
         <div class="col-4 text-center">
         <img src="{% static 'images/jubilee.jpg' %}" width="75%" />
         </div>
-        <div class="col-8">
+        <div class="col-8 abeezee-regular">
         <!-- Title goes between these h2 tags -->
-        <h2>{{ gallery.title | safe }}</h2>
+        <h2 class="adlam-display-regular">{{ gallery.title | safe }}</h2>
         <!-- Content goes directly underneath this -->
         {{ gallery.description | safe }}
         </div>
     </div>
     <div class="row">
-        <div class="col text-right">
-        <!-- Updated on field goes in here -->
-
-        <p class="text-end"><em>Created on: {{ gallery.created_on }}</em></p>
-        </div>
     </div>
     <!-- Displaying user photos -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Member photos:</h3>
+            <h3 class="adlam-display-regular">Your photos:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags
                 to iterate through each comment in comments -->
                 {% for photo in photos %}
-                <div class="p-2 comments {% if not photo.is_approved and photo.user_id == user %}faded{% elif not photo.is_approved %} d-none{% endif %}">
-                <p class="font-weight-bold">
-                    {{ photo.user_id }}<span class="font-weight-normal">{{ photo.updated__on }}</span> wrote:
-                </p>
+                <div class="p-2 comments {% if not photo.is_approved and photo.user_id == user %}faded main-text-color{% elif not photo.is_approved %} d-none{% endif %}">
                 <div class="image-container">
                     {% if "placeholder" in photo.image.url %}
                     <img class="card-img-top" src="{% static 'images/jubilee.jpg' %}" alt="placeholder image">
@@ -41,8 +33,8 @@
                     <img class="card-img-top" src=" {{ photo.image.url }}" alt="{{ photo.caption }}">
                     {% endif %}
                 </div>
-                <div id="comment{{ comment.id }}">
-                    {{ photo.caption | linebreaks }}
+                <div id="comment{{ comment.id }}" class="abeezee-regular">
+                    {{ photo.user_id }} posted:  {{ photo.caption | safe }}
                 </div>
                 {% if not photo.is_approved and photo.user_id == user %}
                 <p class="approval">
@@ -58,8 +50,8 @@
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
             {% if user.is_authenticated %}
-                <h3>Uplaod a photo:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <h3 class="adlam-display-regular">Upload a photo:</h3>
+                <p class="abeezee-regular">Posting as: {{ user.username }}</p>
                 <form id="tipForm" method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
                 {{ photo_form | crispy }}
                 {% csrf_token %}
