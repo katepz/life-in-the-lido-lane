@@ -2,6 +2,15 @@
 
 # Life In The Lido Lane
 
+## Contents
+1. [Overview](#overview)
+    - [Purpose](#purpose)
+    - [Target Audience](#target-audience)
+2. [UX Design](#ux-design)
+    - [User Stories](#user-stories)
+    - [Wireframes](#wireframes)
+    - [Colour Palette](#colour-palette)
+
 ## Overview
 
 ### Purpose
@@ -165,7 +174,7 @@ User stories have been selected to reflect the outline of the project above as w
 
 - when the Events link is clicked the events page is displayed.
 
-Reflection - the User Stories could be condensed into groups relating to the same feature.
+**Reflection - the User Stories should be condensed into groups relating to the same feature.**
 
 ### Design Decisions
 
@@ -191,6 +200,24 @@ Original wireframing has been largely adhered to with some extra images added to
 ##### Gallery page wireframe 
 
 ![About page wireframe](static/images/readme/gallery.JPG)
+
+#### Colour Palette
+
+Adobe Color was used to select a colour palette. The palette was based on an aerial image of the Jubilee Pool, one of my featured lidos, so I felt this was the one to go with providing accesibility checks were aceptable. The colours have been used throughout the project.
+![Colour palette](static/images/readme/palette1.jpg)
+
+On testing the colour palette was found to be colour blind safe. The results are displayed below:
+![Colour blind test](static/images/readme/colourblindsafe1.JPG)
+
+On further testing the contrast ratios were found to be insufficient to adhere to WCAG guidlines and the colour palette was edited and retested for colour blindness compatibility.
+New palette:
+
+![Colour palette](static/images/readme/palette2.jpg)
+
+Retest fo colour blind safe:
+
+![Colour palette](static/images/readme/colourblindsafe3.JPG)
+
 
 #### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
@@ -281,3 +308,18 @@ Properly attribute any external code sources used in the project (excluding GitH
 ## Future Improvements
 Briefly discuss potential future improvements or features that could be added to the project.  
 **Guidance:** Reflect on potential enhancements that could be made to the project after Phase 4: Final Testing, Debugging & Deployment. These could be Could user story features you didn’t have time to implement or improvements based on testing feedback.
+
+
+# references
+- color.adobe https://color.adobe.com
+- unsplah - list people
+- code institite
+- you tuber if i get the carousel in
+- balsamiq
+- lucidchart
+- cludinary
+- heroku
+- git pod
+- git hub
+- [Colour palette testing](https://color.adobe.com/create/color-accessibility)
+- color.adobe.com/create/color-contrast-analyzer
