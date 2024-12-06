@@ -6,16 +6,20 @@
 
 ### Purpose
 This project is intended to give a useful site for open water swimmers looking to visit and swim in the UK's wonderful lidos. It will also give up to date safety advice for new and seasoned open water swimmers. Site users have the opportunity to sign up and, when logged in, they can comment on each of the featured lidos, giving details of a visit or asking a question. They will be able to update or delete this input. Once logged in site users will also be able to upload photos of any lido and, once approved these will be displayed on the gallery page. Any site visitor will be able to suggest a lido to feature without the need for signing up.
-
+A simple approch has been taken to make all lidos easily visible and the site it easy to navigate.
 
 ### Target Audience
 Following a huge surge in the popularity of open water swimming, particularly in the post covid period, the number of potential site users is growing rapidly. The main target audience will be existing open water swimmers looking for information on UK lido sites and locations. Smaller audiences will be tourists and families looking for local activities and novice open water swimmers looking for safe environments to begin their swimming journeys.
 
-Users will be able to view information on selected lidos to include: location, opening times, season length, costs, other facilities eg cafes/changing areas as well as a brief description.
+Users will be able to view information on selected lidos to include: location, season length, costs, other facilities eg cafes/changing areas as well as a brief description.
 
-## User Stories
+## UX Design
 
-### Must-Have User Stories
+### User Stories
+
+User stories have been selected to reflect the outline of the project above as well as some possible features for future iterations.
+
+#### Must-Have User Stories
 **User Story 1:** As a site user I can view a list of info cards so that I can choose the one I want to view in more detail.
 - Several posts are displayed on the home page
 
@@ -94,7 +98,7 @@ Users will be able to view information on selected lidos to include: location, o
 - notifications appear after signingin/signing out
 
 
-### Should-Have User Stories
+#### Should-Have User Stories
 **User Story 1:** As a site user I can see paginated info cards so that it is easier to navigate through them.
 
 - Multiple posts are paginated. 
@@ -115,7 +119,7 @@ Users will be able to view information on selected lidos to include: location, o
 - once approved this appears on the safety page.
 
 
-### Could-Have User Stories
+#### Could-Have User Stories
 
 **User Story 1:** As a site user I can add and remove a lido to a wish-list so that I can remember where I would like to go.
 
@@ -147,16 +151,48 @@ Users will be able to view information on selected lidos to include: location, o
 - a form enables me to upload a photo
 - my uploaded photo appears on the site
 
+#### Won't-Have User Stories
 
+**User Story 1:** As a site user I can click on a map link so that I can get directions.
 
-## Design Decisions
+- Google maps embedded in an iframe on each lido card.
 
-### Wireframes
-Include wireframes for key sections of your website.  
-Briefly describe the design choices, including layout, colour schemes, and fonts.  
-**Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
+**User Story 2:** As a site admin I can create and update an events page so that users can see relevant events.
 
-### Accessibility Considerations
+- The events app appears in the admin panel
+
+**User Story 3:** As a site user I can view a calendar of relevant events so that I can get relevant information.
+
+- when the Events link is clicked the events page is displayed.
+
+Reflection - the User Stories could be condensed into groups relating to the same feature.
+
+### Design Decisions
+
+#### Wireframes
+Original wireframing has been largely adhered to with some extra images added to improve UX. Images show wireframes for laptop and mobile devices.
+
+##### Home page wireframe 
+
+![Home page wireframe](static/images/readme/home.JPG)
+
+##### Individual lido entry wireframe 
+
+![Lido page wireframe](static/images/readme/lido.JPG)
+
+##### About page wireframe 
+
+![About page wireframe](static/images/readme/about.JPG)
+
+##### Safety information page wireframe 
+
+![About page wireframe](static/images/readme/safety.JPG)
+
+##### Gallery page wireframe 
+
+![About page wireframe](static/images/readme/gallery.JPG)
+
+#### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
 **Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
 
