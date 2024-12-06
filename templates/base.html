@@ -18,15 +18,10 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'images/newfavicon.png' %}" >
 
     <!-- Google Fonts CSS -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=ADLaM+Display&display=swap" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -51,35 +46,35 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %} color-me" aria-current="page"
-                            href="{% url 'home' %}" style="color: #8c6c5a;">Home</a>
+                            href="{% url 'home' %}" style="color: #735949;">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == about_url %}active{%endif%}" aria-current="page"
-                            href="{% url 'about' %}" style="color: #8c6c5a;">About</a>
+                            href="{% url 'about' %}" style="color: #735949;">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == safety_url %}active{%endif%}" aria-current="page"
-                            href="{% url 'safety' %}" style="color: #8c6c5a;">Safety</a>
+                            href="{% url 'safety' %}" style="color: #735949;">Safety</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == gallery_url %}active{%endif%}" aria-current="page"
-                            href="{% url 'gallery' %}" style="color: #8c6c5a;">Gallery</a>
+                            href="{% url 'gallery' %}" style="color: #735949;">Gallery</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}" style="color: #8c6c5a;">Logout</a>
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}" style="color: #735949;">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_signup' %}" style="color: #8c6c5a;">Register</a>
+                            href="{% url 'account_signup' %}" style="color: #735949;">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}" style="color: #8c6c5a;">Login</a>
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}" style="color: #735949;">Login</a>
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text" style="color: #8c6c5a;">
+                <span class="navbar-text" style="color: #474752;">
                     Love, Live, Lido
                 </span>
             </div>
@@ -112,9 +107,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-blue">
-        <p class="m-0 text-center footer">Life in the Lido Lane</p>
-        <p class ='m-0 text-center footer'>Keep an eye here for socials in the future</p>
+    <footer class="mt-auto py-3 bg-blue">
+        <p class="m-0 text-center footer-text">Life in the Lido Lane</p>
+        <p class ='m-0 text-center footer-text'>Keep an eye here for socials in the future</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
