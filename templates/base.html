@@ -53,7 +53,7 @@
                             href="{% url 'about' %}" style="color: #735949;">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == safety_url %}active{%endif%}" aria-current="page"
+                        <a class="nav-link {% if request.path == safety_info_url %}active{%endif%}" aria-current="page"
                             href="{% url 'safety' %}" style="color: #735949;">Safety</a>
                     </li>
                     <li class="nav-item">
@@ -95,9 +95,9 @@
     </div>
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
-        <p class="text-end m-3 main-text-color">{{ user }}, thanks for logging in.</p>
+        <p class="text-start m-3 main-text-color abeezee-regular">{{ user }}, thanks for logging in.</p>
         {% else %}
-        <p class="text-end m-3 main-text-color">Log in to share your views.</p>
+        <p class="text-start m-3 main-text-color abeezee-regular">Log in to comment, share a safety tip or upload a photo.</p>
         {% endif %}
 
         {% block content %}
