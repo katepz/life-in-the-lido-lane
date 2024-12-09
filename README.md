@@ -8,8 +8,21 @@
     - [Target Audience](#target-audience)
 2. [UX Design](#ux-design)
     - [User Stories](#user-stories)
+    - [Agile Methodology](#agile-methodology)
     - [Wireframes](#wireframes)
     - [Colour Palette](#colour-palette)
+    - [Typography](#typography)
+    - [Accessibility Considerations](#accessibility-considerations)
+3. [Features Implementation](#features-implementation)
+    - [Home Page](#home-page)
+    - [Account Features](#account-features)
+    - [About Page](#about-page)
+    - [Safety Page](#safety-page)
+    - [Gallery Page](#gallery-page)
+    - [User Notifications](#user-notifications)
+4. [Testing and Validation](#testing-and-validation)
+    - [Testing Results](#testing-results)
+    - [Validation](#validation)
 
 ## Overview
 
@@ -182,7 +195,7 @@ An agile working methodology was used during the project with a GitHub project b
 
 [Project board link](https://github.com/users/katepz/projects/5)
 
-This completed sprint involved the completion of 24 items. The MoSCoW approach to prioritisation was used to ensure that the MVP was completed in good time. Initially all items were placed ijn the Backlog and as they were moved to To Do, In Progress and Done columns in the board the milestone was changed for a visual check on the progress of the project. Of the 24 items completed 16 had been designated as Must Haves, 4 as Should Haves and 4 as Could Haves. 2 Could Haves remain in the Backlog for a future sprint as well as 3 items that were designated as Won't Haves as they were beyond the scope of the initial project. As in the refelection above, User Stories could have been grouped better by the feature that they relate to.
+This completed sprint involved the completion of 24 items. The MoSCoW approach to prioritisation was used to ensure that the MVP was completed in good time. Initially all items were placed in the Backlog and as they were moved to To Do, In Progress and Done columns in the board the milestone was changed for a visual check on the progress of the project. Of the 24 items completed 16 had been designated as Must Haves, 4 as Should Haves and 4 as Could Haves. 2 Could Haves remain in the Backlog for a future sprint as well as 3 items that were designated as Won't Haves as they were beyond the scope of the initial project. As in the refelection above, User Stories could have been grouped better by the feature that they relate to.
 
 #### Images of the Project Board 
 ##### In Progress:
@@ -191,32 +204,30 @@ This completed sprint involved the completion of 24 items. The MoSCoW approach t
 ##### Completed:
 ![Project Board Completed](static/images/readme/Projectboard2.JPG)
 
-### Design Decisions
-
-#### Wireframes
+### Wireframes
 Original wireframing has been largely adhered to with some extra images added to improve UX. Images show wireframes for laptop and mobile devices.
 
-##### Home page wireframe 
+#### Home page wireframe 
 
 ![Home page wireframe](static/images/readme/home.JPG)
 
-##### Individual lido entry wireframe 
+#### Individual lido entry wireframe 
 
 ![Lido page wireframe](static/images/readme/lido.JPG)
 
-##### About page wireframe 
+#### About page wireframe 
 
 ![About page wireframe](static/images/readme/about.JPG)
 
-##### Safety information page wireframe 
+#### Safety information page wireframe 
 
 ![About page wireframe](static/images/readme/safety.JPG)
 
-##### Gallery page wireframe 
+#### Gallery page wireframe 
 
 ![About page wireframe](static/images/readme/gallery.JPG)
 
-#### Colour Palette
+### Colour Palette
 
 Adobe Color was used to select a colour palette. The palette was based on an aerial image of the Jubilee Pool, one of my featured lidos, so I felt this was the one to go with providing accesibility checks were aceptable. The colours have been used throughout the project.
 
@@ -237,17 +248,18 @@ Retest for colour blind safe:
 
 Project colours have been adjusted to reflect the new colour palette. Logo files have also been adjusted.
 
-#### Typography
+### Typography
 
 ADLaM Disply is used for headings and ABeeZee is used for text. ABeeZee is a clean and modern sans-serif font designed for easy readability. It features simple straightforward design with slightly rounded edges. Overall, it is a user-friendly attractive font that can enhance readability. Paired with ADLaM Display it createsan accessible typography system.
 
-#### Accessibility Considerations
+### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
 **Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
 
 ## Features Implementation
 
-### Feature 1: List of featured lidos on Home page and a detailed view of each lido when clicked on. Comment on a featured lido and view comments.
+### Home Page: 
+**List of featured lidos on Home page and a detailed view of each lido when clicked on. Comment on a featured lido and view comments.**
 
 ![Home Page](static/images/readme/homepage1.JPG)
 
@@ -257,7 +269,8 @@ Discuss how accessibility guidelines were adhered to, including colour contrast 
 
 ![Comment Form](static/images/readme/commentform1.JPG)
 
-### Feature 2: Account functionality - register an account, log in, log out.
+### Account Features: 
+**Account functionality - register an account, log in, log out.**
 
 ![Register an Account](static/images/readme/signup1.JPG)
 
@@ -268,25 +281,29 @@ As the mock-up generator is not signed in it can not display the logout page so 
 ![Log Out](static/images/readme/signout.JPG)
 
 
-### Feature 3: Add and manage About page. View About page. Suggest a lido to feature via About page.
+### About Page: 
+**Add and manage About page. View About page. Suggest a lido to feature via About page.**
 
 ![About Page](static/images/readme/about1.JPG)
 
 ![Suggest a Lido Form](static/images/readme/suggestlido.JPG)
 
-### Feature 4: Add and manage Safety page. View Safety page. Suggest a safety tip via About page.
+### Safety Page: 
+**Add and manage Safety page. View Safety page. Suggest a safety tip via About page.**
 
 ![Safety Page](static/images/readme/safety1.JPG)
 
 ![View and Suggest Safety Tips](static/images/readme/safetytips1.JPG)
 
-### Feature 5: Add and manage Gallery page. View Gallery page. Upload an image via Gallery page.
+### Gallery Page: 
+**Add and manage Gallery page. View Gallery page. Upload an image via Gallery page.**
 
 ![Gallery Page](static/images/readme/gallery1.JPG)
 
 ![Upload an Image](static/images/readme/upload1.JPG)
 
-### Feature : Users receive notifications when they interact with the application.
+### User Notifications: 
+**Users receive notifications when they interact with the application.**
 
 ![Log In Notification](static/images/readme/signinnot1.JPG)
 
@@ -297,6 +314,12 @@ As the mock-up generator is not signed in it can not display the logout page so 
 ![Safety Tip Notification](static/images/readme/safetynot1.JPG)
 
 ![Upload Notification](static/images/readme/uploadnot1.JPG)
+
+### Site Management
+**Apps appear in admin panel**
+
+![Admin Panel](static/images/readme/admin1.JPG)
+
 
 ## Testing and Validation
 
