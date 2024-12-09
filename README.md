@@ -245,40 +245,58 @@ ADLaM Disply is used for headings and ABeeZee is used for text. ABeeZee is a cle
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
 **Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
 
-## AI Tools Usage
-
-### DALL-E
-Describe how DALL-E was used for image generation, including examples of successes and challenges.  
-**Guidance:** Specifically mention how you used DALL-E for image generation and the impact this had on your design process.
-
 ## Features Implementation
 
-### Core Features (Must-Haves)
-- **Feature 1:** Description of the implemented feature.
-- **Feature 2:** Description of the implemented feature.
+### Feature 1: List of featured lidos on Home page and a detailed view of each lido when clicked on. Comment on a featured lido and view comments.
 
-(Include all must-have features)  
-**Guidance:** Use this section as you complete Phase 2: Must User Stories Implementation & Testing. Document all the must-have features you implemented, explaining how they align with the user stories and acceptance criteria.
+![Home Page](static/images/readme/homepage1.JPG)
 
-### Advanced Features (Should-Haves)
-- **Feature 1:** Description of the implemented feature.
-- **Feature 2:** Description of the implemented feature.
+![Lido Detail](static/images/readme/lidodetail1.JPG)
 
-(Include all should-have features)  
-**Guidance:** Include any advanced features you implemented during Phase 3: Should User Stories Implementation & Any Advanced Features. Explain how these features enhance user experience and their alignment with the acceptance criteria.
+![View Comments](static/images/readme/comment1.JPG)
 
-### Optional Features (Could-Haves)
-- **Feature 1:** Description of the implemented feature (if any).
-- **Feature 2:** Description of the implemented feature (if any).
+![Comment Form](static/images/readme/commentform1.JPG)
 
-(Include any could-have features that were implemented or considered)  
-**Guidance:** If any could-have features were implemented, describe them here. This is an opportunity to showcase extra work done beyond the initial scope. But remember - keep it simple! Focus on the Must stories first. Could user story features are commonly earmarked for future project iterations.
+### Feature 2: Account functionality - register an account, log in, log out.
 
-## AI Tools Usage
+![Register an Account](static/images/readme/signup1.JPG)
 
-### GitHub Copilot
-Describe how GitHub Copilot assisted in coding, including any challenges or adjustments needed.  
-**Guidance:** Reflect on how GitHub Copilot assisted in coding, particularly any challenges or adjustments that were needed to align with project goals.
+![Log In](static/images/readme/login1.JPG)
+
+As the mock-up generator is not signed in it can not display the logout page so this is an example of that page from a laptop size screen.
+
+![Log Out](static/images/readme/signout.JPG)
+
+
+### Feature 3: Add and manage About page. View About page. Suggest a lido to feature via About page.
+
+![About Page](static/images/readme/about1.JPG)
+
+![Suggest a Lido Form](static/images/readme/suggestlido.JPG)
+
+### Feature 4: Add and manage Safety page. View Safety page. Suggest a safety tip via About page.
+
+![Safety Page](static/images/readme/safety1.JPG)
+
+![View and Suggest Safety Tips](static/images/readme/safetytips1.JPG)
+
+### Feature 5: Add and manage Gallery page. View Gallery page. Upload an image via Gallery page.
+
+![Gallery Page](static/images/readme/gallery1.JPG)
+
+![Upload an Image](static/images/readme/upload1.JPG)
+
+### Feature : Users receive notifications when they interact with the application.
+
+![Log In Notification](static/images/readme/signinnot1.JPG)
+
+![LogOut Notification](static/images/readme/signoutnot1.JPG)
+
+![Suggest a Lido Notification](static/images/readme/lidonot1.JPG)
+
+![Safety Tip Notification](static/images/readme/safetynot1.JPG)
+
+![Upload Notification](static/images/readme/uploadnot1.JPG)
 
 ## Testing and Validation
 
