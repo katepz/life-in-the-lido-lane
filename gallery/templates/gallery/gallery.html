@@ -20,7 +20,7 @@
     <!-- Displaying user photos -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3 class="adlam-display-regular">Your photos:</h3>
+            <h3 class="adlam-display-regular main-text-color">Your photos:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags
                 to iterate through each comment in comments -->
@@ -33,7 +33,7 @@
                     <img class="card-img-top" src=" {{ photo.image.url }}" alt="{{ photo.caption }}">
                     {% endif %}
                 </div>
-                <div id="comment{{ comment.id }}" class="abeezee-regular">
+                <div id="comment{{ comment.id }}" class="abeezee-regular main-text-color">
                     {{ photo.user_id }} posted:  {{ photo.caption | safe }}
                 </div>
                 {% if not photo.is_approved and photo.user_id == user %}
@@ -50,15 +50,15 @@
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
             {% if user.is_authenticated %}
-                <h3 class="adlam-display-regular">Upload a photo:</h3>
-                <p class="abeezee-regular">Posting as: {{ user.username }}</p>
+                <h3 class="adlam-display-regular main-text-color">Upload a photo:</h3>
+                <p class="abeezee-regular main-text-color">Posting as: {{ user.username }}</p>
                 <form id="tipForm" method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
                 {{ photo_form | crispy }}
                 {% csrf_token %}
-                <button id="suggestButton" type="submit" class="btn btn-signup btn-lg">Upload</button>
+                <button id="suggestButton" type="submit" class="btn btn-signup btn-lg abeezee-regular">Upload</button>
                 </form>
             {% else %}
-            <p>Log in to upload a photo.</p>
+            <p class="abeezee-regular main-text-color">Log in to upload a photo.</p>
             {% endif %}
             </div>
         </div>

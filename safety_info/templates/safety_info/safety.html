@@ -19,16 +19,16 @@
     <!-- Displaying Safety tips -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3 class="adlam-display-regular">Safety Tips:</h3>
+            <h3 class="adlam-display-regular main-text-color">Safety Tips:</h3>
             <div class="card-body abeezee-regular">
                 <!-- We want a for loop inside the empty control tags
                 to iterate through each comment in comments -->
                 {% for suggestion in safetysuggestion %}
-                <div class=" abeezee-regular p-2 comments {% if not suggestion.is_approved and suggestion.user_id == user %}main-text-color faded{% elif not suggestion.is_approved %} d-none{% endif %}">
-                <p class="font-weight-bold">
-                    {{ suggestion.user_id }}<span class="font-weight-normal">{{ suggestion.created_on }}</span> wrote:
+                <div class=" abeezee-regular p-2 comments {% if not suggestion.is_approved and suggestion.user_id == user %} faded{% elif not suggestion.is_approved %} d-none{% endif %}">
+                <p class="font-weight-bold main-text-color abeezee-regular">
+                    {{ suggestion.user_id }} wrote:
                 </p>
-                <div id="comment{{ comment.id }}">
+                <div id="comment{{ comment.id }}" class="font-weight-bold main-text-color abeezee-regular">
                     {{ suggestion.tip | linebreaks }}
                 </div>
                 {% if not suggestion.is_approved and suggestion.user_id == user %}
@@ -45,15 +45,15 @@
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
             {% if user.is_authenticated %}
-                <h3 class="adlam-display-regular">Suggest a safety tip:</h3>
-                <p class="abeezee-regular">Posting as: {{ user.username }}</p>
+                <h3 class="adlam-display-regular main-text-color">Suggest a safety tip:</h3>
+                <p class="abeezee-regular main-text-color">Posting as: {{ user.username }}</p>
                 <form id="tipForm" method="post" style="margin-top: 1.3em;">
                 {{ safetysuggestion_form | crispy }}
                 {% csrf_token %}
-                <button id="suggestButton" type="submit" class="btn btn-signup btn-lg">Suggest</button>
+                <button id="suggestButton" type="submit" class="btn btn-signup btn-lg abeezee-regular">Suggest</button>
                 </form>
             {% else %}
-            <p>Log in to leave a safety tip.</p>
+            <p class=" abeezee-regular main-text-color">Log in to leave a safety tip.</p>
             {% endif %}
             </div>
         </div>
