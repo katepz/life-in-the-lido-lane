@@ -219,9 +219,11 @@ Original wireframing has been largely adhered to with some extra images added to
 #### Colour Palette
 
 Adobe Color was used to select a colour palette. The palette was based on an aerial image of the Jubilee Pool, one of my featured lidos, so I felt this was the one to go with providing accesibility checks were aceptable. The colours have been used throughout the project.
+
 ![Colour palette](static/images/readme/palette1.jpg)
 
 On testing the colour palette was found to be colour blind safe. The results are displayed below:
+
 ![Colour blind test](static/images/readme/colourblindsafe1.JPG)
 
 On further testing the contrast ratios were found to be insufficient to adhere to WCAG guidlines and the colour palette was edited and retested for colour blindness compatibility.
@@ -229,7 +231,7 @@ New palette:
 
 ![Colour palette](static/images/readme/palette2.jpg)
 
-Retest fo colour blind safe:
+Retest for colour blind safe:
 
 ![Colour palette](static/images/readme/colourblindsafe3.JPG)
 
