@@ -176,6 +176,21 @@ User stories have been selected to reflect the outline of the project above as w
 
 **Reflection - the User Stories should be condensed into groups relating to the same feature.**
 
+### Agile Methodology
+
+An agile working methodology was used during the project with a GitHub project board being the basis of this method.
+
+[Project board link](https://github.com/users/katepz/projects/5)
+
+This completed sprint involved the completion of 24 items. The MoSCoW approach to prioritisation was used to ensure that the MVP was completed in good time. Initially all items were placed ijn the Backlog and as they were moved to To Do, In Progress and Done columns in the board the milestone was changed for a visual check on the progress of the project. Of the 24 items completed 16 had been designated as Must Haves, 4 as Should Haves and 4 as Could Haves. 2 Could Haves remain in the Backlog for a future sprint as well as 3 items that were designated as Won't Haves as they were beyond the scope of the initial project. As in the refelection above, User Stories could have been grouped better by the feature that they relate to.
+
+#### Images of the Project Board 
+##### In Progress:
+![Project Board in Progress](static/images/readme/Projectboard1.JPG)
+
+##### Completed:
+![Project Board Completed](static/images/readme/Projectboard2.JPG)
+
 ### Design Decisions
 
 #### Wireframes
@@ -219,6 +234,10 @@ Retest fo colour blind safe:
 ![Colour palette](static/images/readme/colourblindsafe3.JPG)
 
 Project colours have been adjusted to reflect the new colour palette. Logo files have also been adjusted.
+
+#### Typography
+
+ADLaM Disply is used for headings and ABeeZee is used for text. ABeeZee is a clean and modern sans-serif font designed for easy readability. It features simple straightforward design with slightly rounded edges. Overall, it is a user-friendly attractive font that can enhance readability. Paired with ADLaM Display it createsan accessible typography system.
 
 #### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
