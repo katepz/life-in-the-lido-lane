@@ -7,14 +7,13 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container abeezee-regular main-text-color">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign In" %}</h3>
+            <h3 class = "adlam-display-regular main-text-color">{% trans "Sign In" %}</h3>
 
-            <p>{% blocktrans %}Welcome back to the code|star blog. To leave a comment or like a post, please log in. If
-                you
-                have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+            <p class="abeezee-regular main-text-color">{% blocktrans %}Welcome back to Life in the Lido Lane. To leave a comment, add a safety tip or upload a photo please log in. If
+                you don't have an account yet, then please <a class="link" href="{{ signup_url }}">sign up</a>
                 first.{% endblocktrans %}</p>
         </div>
     </div>
@@ -26,7 +25,7 @@
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+                <button class="btn btn-signup right abeezee-regular main-text-color" type="submit">{% trans "Sign In" %}</button>
             </form>
         </div>
     </div>

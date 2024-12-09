@@ -95,9 +95,9 @@
     </div>
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
-        <p class="text-end m-3 main-text-color">{{ user }}, thanks for logging in.</p>
+        <p class="text-start m-3 main-text-color abeezee-regular">{{ user }}, thanks for logging in.</p>
         {% else %}
-        <p class="text-end m-3 main-text-color">Log in to share your views.</p>
+        <p class="text-start m-3 main-text-color abeezee-regular">Log in to comment, share a safety tip or upload a photo.</p>
         {% endif %}
 
         {% block content %}
