@@ -20,6 +20,9 @@
     - [Safety Page](#safety-page)
     - [Gallery Page](#gallery-page)
     - [User Notifications](#user-notifications)
+4. [Testing and Validation](#testing-and-validation)
+    - [Testing Results](#testing-results)
+    - [Validation](#validation)
 
 ## Overview
 
@@ -311,6 +314,12 @@ As the mock-up generator is not signed in it can not display the logout page so 
 ![Safety Tip Notification](static/images/readme/safetynot1.JPG)
 
 ![Upload Notification](static/images/readme/uploadnot1.JPG)
+
+### Site Management
+**Apps appear in admin panel**
+
+![Admin Panel](static/images/readme/admin1.JPG)
+
 
 ## Testing and Validation
 
