@@ -6,13 +6,14 @@
 1. [Overview](#overview)
     - [Purpose](#purpose)
     - [Target Audience](#target-audience)
-2. [UX Design](#ux-design)
+2. [Design](#design)
     - [User Stories](#user-stories)
     - [Agile Methodology](#agile-methodology)
     - [Wireframes](#wireframes)
     - [Colour Palette](#colour-palette)
     - [Typography](#typography)
     - [Accessibility Considerations](#accessibility-considerations)
+    - [Database Planning](#database-planning)
 3. [Features Implementation](#features-implementation)
     - [Home Page](#home-page)
     - [Account Features](#account-features)
@@ -35,7 +36,7 @@ Following a huge surge in the popularity of open water swimming, particularly in
 
 Users will be able to view information on selected lidos to include: location, season length, costs, other facilities eg cafes/changing areas as well as a brief description.
 
-## UX Design
+## Design
 
 ### User Stories
 
@@ -253,8 +254,13 @@ Project colours have been adjusted to reflect the new colour palette. Logo files
 ADLaM Disply is used for headings and ABeeZee is used for text. ABeeZee is a clean and modern sans-serif font designed for easy readability. It features simple straightforward design with slightly rounded edges. Overall, it is a user-friendly attractive font that can enhance readability. Paired with ADLaM Display it createsan accessible typography system.
 
 ### Accessibility Considerations
-Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
-**Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
+Careful consideration given to colour palette, see the section above. Images have alt text attributes and aria labelling means that screen readers will be able to access the site.
+
+### Database Planning
+
+In order to facilitate ease of implemantation of current and future possible features the following ERD was developed for this project. The tables headed with a green cell are for Must Have features, peach cells are for Should Have features and yellow cells are for Could Have features. All but one of these has been used in the initial sprint. The VisitList model may be implemented in a future sprint.
+
+![Database ERD](static/images/readme/erd1.JPG)
 
 ## Features Implementation
 
@@ -342,15 +348,20 @@ All test actions behaved as expected except the responsiveness of the page detai
 Main issues with performance were with images - suggested change of format from png and jpg to next gen formats.
 
 ### Validation
-Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
-Include the results of the validation process.  
-**Guidance:** Document your use of W3C and Jigsaw validators to ensure your HTML and CSS meet web standards. Include any errors or warnings encountered and how they were resolved.
+#### HTML
+No errors were found when passing through W3C HTML validator. Some warnings for unneeded trailing slashes on hr elements which were removed.
 
-## AI Tools Usage
+![HTML Testing](static/images/readme/htmlvalidation1.JPG)
 
-### GitHub Copilot
-Brief reflection on the effectiveness of using AI tools for debugging and validation.  
-**Guidance:** Reflect on how GitHub Copilot assisted with debugging and validation, particularly any issues it helped resolve.
+#### CSS
+No errors were found when passing through W3C HTML validator. Some recommendations for duplicate css classes. This will be tackled in the next sprint. 
+
+![CSS Testing](static/images/readme/cssvalidation1.JPG)
+
+#### Python
+Some spacing errors were found and corrected when using the CI Python Linter tool. The image shows the main views.py file after corrections.
+
+![Python Testing](static/images/readme/pythonlinterexample1.JPG)
 
 ## Deployment
 
