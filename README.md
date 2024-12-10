@@ -21,7 +21,7 @@
     - [Gallery Page](#gallery-page)
     - [User Notifications](#user-notifications)
 4. [Testing and Validation](#testing-and-validation)
-    - [Testing Results](#testing-results)
+    - [Manual Testing Results](#manual-testing-results)
     - [Validation](#validation)
 
 ## Overview
@@ -323,10 +323,14 @@ As the mock-up generator is not signed in it can not display the logout page so 
 
 ## Testing and Validation
 
-### Testing Results
-Summarize the results of testing across different devices and screen sizes.  
-Mention any issues found and how they were resolved.  
-**Guidance:** Summarize the results of your testing across various devices using tools like Chrome DevTools, as outlined in Phase 2. Mention any issues found and how they were resolved.
+### Manual Testing Results
+The followi8mng table shows the results of testing the functionality fo the application.
+
+![Testing Results](static/images/readme/testresults.JPG)
+
+All test actions behaved as expected except the responsiveness of the page detailing individual lidos. This will be addressed in the bug section later.
+
+### Lighthouse Testing Results
 
 ### Validation
 Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
