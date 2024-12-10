@@ -324,13 +324,22 @@ As the mock-up generator is not signed in it can not display the logout page so 
 ## Testing and Validation
 
 ### Manual Testing Results
-The followi8mng table shows the results of testing the functionality fo the application.
+The following table shows the results of testing the functionality fo the application.
 
 ![Testing Results](static/images/readme/testresults.JPG)
 
 All test actions behaved as expected except the responsiveness of the page detailing individual lidos. This will be addressed in the bug section later.
 
 ### Lighthouse Testing Results
+#### Mobile
+
+![Lighthouse Mobile](static/images/readme/lighthousemobile.JPG)
+
+#### Desktop
+
+![Lighthouse Desktop](static/images/readme/lighthousedesktop.JPG)
+
+Main issues with performance were with images - suggested change of format from png and jpg to next gen formats.
 
 ### Validation
 Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
