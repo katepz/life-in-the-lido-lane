@@ -210,3 +210,17 @@ body {
 h2 {
     color:#f0f0f2;
 }
+
+/* Default CSS for larger screens (image hidden) */
+.mobile-image img {
+    display: none;
+}
+
+/* Media query for mobile screen sizes */
+@media screen and (max-width: 430px) {
+    .mobile-image img {
+        display: block; 
+        width: 100%;    
+        height: auto;   
+    }
+}

@@ -403,7 +403,7 @@ The following table shows the results of testing the functionality fo the applic
 
 ![Testing Results](static/images/readme/testresults.JPG)
 
-All test actions behaved as expected except the responsiveness of the page detailing individual lidos. This will be addressed in the bug section later.
+All test actions behaved as expected except the responsiveness of the page detailing individual lidos. This has been addressed by adding a media query to display the image underneath the lido name for mobile screen sizes.
 
 ### Lighthouse Testing Results
 #### Mobile
@@ -481,7 +481,7 @@ Future improvement will include implementation of the remaining Could Have and W
 
 As part of the validation process some duplicate CSS classes were identified and these would be adjusted to improve performance. This was not judged to be a priority in this sprint as performance scores were good.
 
-There is an issue with responsivity of the lido detail page on a mobile screen. The page displays ok but the image does not. This would be fixed in a future iteration.
+There is an issue with responsivity of the lido detail page on a mobile screen. The page displays with the image underneath the lido name but there is too much space between the image and the text. This would be fixed in a future iteration.
 
 
 ## Credits
@@ -498,10 +498,3 @@ There is an issue with responsivity of the lido detail page on a mobile screen. 
 ### People
 - John and Roo on the Code Institute  Coding Coach Channel for expert help when needed
 - Other members of the Headforwards September 24 Cohort for help and support
-
-
-
-
-
-
-
