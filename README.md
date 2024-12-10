@@ -6,13 +6,14 @@
 1. [Overview](#overview)
     - [Purpose](#purpose)
     - [Target Audience](#target-audience)
-2. [UX Design](#ux-design)
+2. [Design](#design)
     - [User Stories](#user-stories)
     - [Agile Methodology](#agile-methodology)
     - [Wireframes](#wireframes)
     - [Colour Palette](#colour-palette)
     - [Typography](#typography)
     - [Accessibility Considerations](#accessibility-considerations)
+    - [Database Planning](#database-planning)
 3. [Features Implementation](#features-implementation)
     - [Home Page](#home-page)
     - [Account Features](#account-features)
@@ -20,9 +21,24 @@
     - [Safety Page](#safety-page)
     - [Gallery Page](#gallery-page)
     - [User Notifications](#user-notifications)
-4. [Testing and Validation](#testing-and-validation)
+4. [Technologies Used](#technologies-used)
+    - [Planning and Design](#planning-and-design)
+    - [Languages](#languages)
+    - [Frameworks](#frameworks)
+    - [Database](#database)
+    - [Development](#development)
+    - [Installed Django Packages](#installed-django-packages)
+    - [Validation and Testing](#validation-and-testing)
+    - [Deployment](#deployment)
+    - [AI](#ai)
+5. [Testing and Validation](#testing-and-validation)
     - [Manual Testing Results](#manual-testing-results)
+    - [Lighthouse Testing Results](#lighthouse-testing-results)
+    - [Wave Accessibility Testing](#wave-accessibility-testing)
     - [Validation](#validation)
+6. [Deployment](#deployment)
+    - [Pre Deployment](#pre-deployment)
+    - [Deployment Steps](#deployment-steps)
 
 ## Overview
 
@@ -35,7 +51,7 @@ Following a huge surge in the popularity of open water swimming, particularly in
 
 Users will be able to view information on selected lidos to include: location, season length, costs, other facilities eg cafes/changing areas as well as a brief description.
 
-## UX Design
+## Design
 
 ### User Stories
 
@@ -253,8 +269,13 @@ Project colours have been adjusted to reflect the new colour palette. Logo files
 ADLaM Disply is used for headings and ABeeZee is used for text. ABeeZee is a clean and modern sans-serif font designed for easy readability. It features simple straightforward design with slightly rounded edges. Overall, it is a user-friendly attractive font that can enhance readability. Paired with ADLaM Display it createsan accessible typography system.
 
 ### Accessibility Considerations
-Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
-**Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
+Careful consideration given to colour palette, see the section above. Images have alt text attributes and aria labelling means that screen readers will be able to access the site.
+
+### Database Planning
+
+In order to facilitate ease of implemantation of current and future possible features the following ERD was developed for this project. The tables headed with a green cell are for Must Have features, peach cells are for Should Have features and yellow cells are for Could Have features. All but one of these has been used in the initial sprint. The VisitList model may be implemented in a future sprint.
+
+![Database ERD](static/images/readme/erd1.JPG)
 
 ## Features Implementation
 
@@ -320,73 +341,167 @@ As the mock-up generator is not signed in it can not display the logout page so 
 
 ![Admin Panel](static/images/readme/admin1.JPG)
 
+## Technologies Used
+
+### Planning and Design
+GitHUb - project board
+Lucidchart - ERD for database
+Balsamiq - for wireframe diagrams
+Adobe Color - for palette selection
+Font Forge - for selecting accessible font pairing
+Cloudinary - for hosting images
+Unsplash - for royalty free images
+Google Fonts - custom font styling
+Favicon generator - to produce favicon
+Logo.com - free logo maker
+
+### Languages
+HTML5 - for templates
+CSS3 - for styling
+Python3 - for views, models, logic in templates
+Javascript - update and delete functionality
+Markdown - for README.md
+
+### Frameworks
+Bootstrap5 - styling & responsiveness
+Django4 - full stack project building
+
+### Database
+Postgres - supplied via Code Institute
+
+### Development
+Git - for version control
+Gitpod - IDE
+GitHub - set up and management of repo from a CI template, use of project board for planning and agile methodologies, link to heroku for deployment
+
+### Installed Django Packages
+Cloudinary - image handling
+Allauth - for secure account handling
+Summernote - for improved comment input
+Gunicorn - web serving
+Crispy forms - form use
+Whitenoise - white noise handling
+
+### Validation and Testing
+HTML - The W3C Markup validation Service
+CSS - The W3C CSS Validation Service
+Python - The Code Institute Python Linter
+Lighthouse
+Wave
+
+### Deployment
+Heroku 
+
+### AI
+Chatgpt - bug fixing suggestions, assistance in model structure
+
 
 ## Testing and Validation
 
 ### Manual Testing Results
-The followi8mng table shows the results of testing the functionality fo the application.
+The following table shows the results of testing the functionality fo the application.
 
 ![Testing Results](static/images/readme/testresults.JPG)
 
 All test actions behaved as expected except the responsiveness of the page detailing individual lidos. This will be addressed in the bug section later.
 
 ### Lighthouse Testing Results
+#### Mobile
+
+![Lighthouse Mobile](static/images/readme/lighthousemobile.JPG)
+
+#### Desktop
+
+![Lighthouse Desktop](static/images/readme/lighthousedesktop.JPG)
+
+Main issues with performance were with images - suggested change of format from png and jpg to next gen formats.
+
+### Wave Accessibility testing
+No errors were detected.
+
+![Wave Testing](static/images/readme/wave.JPG)
 
 ### Validation
-Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
-Include the results of the validation process.  
-**Guidance:** Document your use of W3C and Jigsaw validators to ensure your HTML and CSS meet web standards. Include any errors or warnings encountered and how they were resolved.
+#### HTML
+No errors were found when passing through W3C HTML validator. Some warnings for unneeded trailing slashes on hr elements which were removed.
 
-## AI Tools Usage
+![HTML Testing](static/images/readme/htmlvalidation1.JPG)
 
-### GitHub Copilot
-Brief reflection on the effectiveness of using AI tools for debugging and validation.  
-**Guidance:** Reflect on how GitHub Copilot assisted with debugging and validation, particularly any issues it helped resolve.
+#### CSS
+No errors were found when passing through W3C HTML validator. Some recommendations for duplicate css classes. This will be tackled in the next sprint. 
+
+![CSS Testing](static/images/readme/cssvalidation1.JPG)
+
+#### Python
+Some spacing errors were found and corrected when using the CI Python Linter tool. The image shows the main views.py file after corrections.
+
+![Python Testing](static/images/readme/pythonlinterexample1.JPG)
 
 ## Deployment
 
-### Deployment Process
-Briefly describe the deployment process to GitHub Pages or another cloud platform.  
-Mention any specific challenges encountered during deployment.  
-**Guidance:** Describe the steps you took to deploy your website during Phase 4: Final Testing, Debugging & Deployment, including any challenges encountered.
+The deployed project can be found at:
+[Deployed Site](https://life-in-the-lido-lane-2b0dc6519e2c.herokuapp.com/)
 
-## AI Tools Usage
+This project was deployed to Heroku from the main branch of the Life In The Lido Lane repository on GitHub. 
 
-### Reflection
-Describe the role AI tools played in the deployment process, including any benefits or challenges.  
-**Guidance:** Reflect on how AI tools assisted with the deployment process, particularly how they streamlined any tasks or presented challenges.
+The project was reployed several times after new features were made functional so that continuous checking of the deployed site could be made and any errors picked up early.
+
+### Pre Deployment
+- requirements.txt file to be up to date with installed Python modules needed for effective deployment
+- Procfile used to configure the application as a gunicorn web app
+- runtime.txt populated with Python version for Heroku to use
+- Add Heroku to allowed apps in IDE project settings.py file
+- Obtain Cloudinary API key to create the CLOUDINARY_URL
+- Generate SECRET_KEY
+- Environment variables of a senstive nature - DATABASE_URL, CLOUDINARY_URL, SECRET_KEY - to be added to env.py file which is not pushed to GitHub
+
+### Deployment Steps
+- Create Heroku account
+- Create a new Heroku app
+- Select region as Europe
+- Add environment variables manually to Heroku in the Config Vars section
+- Connect Heroku to GitHub repository using the search function
+- Once branch is merged successfully with the main branch in the GitHub repo the main branch can be deployed
+- In Heroku dashboard click on Deploy tab - see image below
+- Make sure main branch is selected for deployment, click Deploy - see image below
+- Once the build process has finished click to open the app - see image below
+
+![Deployment from Heroku](static/images/readme/deployment1.JPG)
 
 ## Reflection on Development Process
 
 ### Successes
-Effective use of AI tools, including GitHub Copilot and DALL-E, and how they contributed to the development process.
+The use of the GitHub project board was excellent for managing workload and workflow. Deployment was generally successful with only a couple of minor deployment issues relating to incorrect config vars and static files. Both issues were rectified easily. the vast majority of minor bugs were able to be identified easily and rectified quickly. The time spent at the start of the project on planning the database tables lead to no errors in models and there was no need to readjust models once created and migrated.
 
 ### Challenges
-Describe any challenges faced when integrating AI-generated content and how they were addressed.
-
-### Final Thoughts
-Provide any additional insights gained during the project and thoughts on the overall process.  
-**Guidance:** Begin drafting reflections during Phase 1 and update throughout the project. Finalize this section after Phase 4. Highlight successes and challenges, particularly regarding the use of AI tools, and provide overall insights into the project.
-
-## Code Attribution
-Properly attribute any external code sources used in the project (excluding GitHub Copilot-generated code).  
-**Guidance:** Document any external code sources used throughout the entire project, especially during Phase 2 and Phase 3. Exclude GitHub Copilot-generated code from attribution.
+The main challenges were: integrating experience to date with the new project; correct set-up of repo, IDE, Heroku, Cloudinary; the links between them; generating good content.
 
 ## Future Improvements
-Briefly discuss potential future improvements or features that could be added to the project.  
-**Guidance:** Reflect on potential enhancements that could be made to the project after Phase 4: Final Testing, Debugging & Deployment. These could be Could user story features you didn’t have time to implement or improvements based on testing feedback.
+Future improvement will include implementation of the remaining Could Have and Won't Have User Stories from this sprint. This will be a link on each individual Lido page to add it to a visit list that would be stored in the users profile. Also to enhance UX there would be an image carousel on the top of the home page or potentially as a landing page.
+
+As part of the validation process some duplicate CSS classes were identified and these would be adjusted to improve performance. This was not judged to be a priority in this sprint as performance scores were good.
+
+There is an issue with responsivity of the lido detail page on a mobile screen. The page displays ok but the image does not. This would be fixed in a future iteration.
 
 
-# references
-- color.adobe https://color.adobe.com
-- unsplah - list people
-- code institite
-- you tuber if i get the carousel in
-- balsamiq
-- lucidchart
-- cludinary
-- heroku
-- git pod
-- git hub
-- [Colour palette testing](https://color.adobe.com/create/color-accessibility)
-- color.adobe.com/create/color-contrast-analyzer
+## Credits
+### Code
+- The project is inspired by the Codestar Blog project from the Code Institute LMS and some of the code and processes from that project has been used as a starting point for this one.
+- Django documentation has been used to cross check correct configurations os aspects of the project
+- Chat GPT gave some suggestions for model structure which was adapted to fit the database schema
+- Google fonts used for embedded code for typography
+
+### Content
+- individual lido pages for info and images.
+- unsplash for free to use stock images
+
+### People
+- John and Roo on the Code Institute  Coding Coach Channel for expert help when needed
+- Other members of the Headforwards September 24 Cohort for help and support
+
+
+
+
+
+
+

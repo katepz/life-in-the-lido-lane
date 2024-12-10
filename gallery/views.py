@@ -4,7 +4,6 @@ from .models import GalleryPage, Photo
 from .forms import PhotoForm
 
 
-
 def gallery_page(request):
     """
     Renders the gallery page
@@ -14,7 +13,7 @@ def gallery_page(request):
 
     if request.method == "POST":
         photo_form = PhotoForm(request.POST, request.FILES)
-        if  photo_form.is_valid():
+        if photo_form.is_valid():
             photo = photo_form.save(commit=False)
             photo.user_id = request.user
             photo.save()
@@ -26,8 +25,8 @@ def gallery_page(request):
     return render(
         request,
         "gallery/gallery.html",
-        {"gallery": gallery, 
-        "photos": photos,
-        "photo_form": photo_form,
-        },
+        {"gallery": gallery,
+            "photos": photos,
+            "photo_form": photo_form,
+         },
     )

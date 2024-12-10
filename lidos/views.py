@@ -12,6 +12,7 @@ class LidoList(generic.ListView):
     template_name = "lidos/index.html"
     paginate_by = 6
 
+
 def lido_detail(request, slug):
     """
     Display an individual :model: `lidos.Lido`
@@ -19,7 +20,6 @@ def lido_detail(request, slug):
     **Context**
     ``lido``
         An instance of :model: `lidos.Lido`
-    
     **Template**
     :template:`lidos/lido_detail.html`
     """
@@ -36,7 +36,7 @@ def lido_detail(request, slug):
             comment.lido = lido
             comment.save()
             messages.add_message(
-                request, messages.SUCCESS,'Comment submitted and awaiting approval'
+                request, messages.SUCCESS, 'Comment awaiting approval'
             )
 
     comment_form = CommentForm()
@@ -45,13 +45,14 @@ def lido_detail(request, slug):
         request,
         "lidos/lido_detail.html",
         {
-            "lido": lido, 
-            "info": "Information:", 
+            "lido": lido,
+            "info": "Information:",
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
         }
     )
+
 
 def comment_edit(request, slug, comment_id):
     """
@@ -71,9 +72,10 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(request, messages.ERROR, 'Error updating.')
 
     return HttpResponseRedirect(reverse('lido_detail', args=[slug]))
+
 
 def comment_delete(request, slug, comment_id):
     """
@@ -87,6 +89,6 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(request, messages.ERROR, 'No access to delete!')
 
     return HttpResponseRedirect(reverse('lido_detail', args=[slug]))
