@@ -10,3 +10,4 @@ class SafetyInfoAdmin(SummernoteModelAdmin):
 @admin.register(SafetySuggestion)
 class SafetySuggestionAdmin(SummernoteModelAdmin):
     summernote_fields = ('tip',)
+    list_display = ('user_id', 'is_approved')
