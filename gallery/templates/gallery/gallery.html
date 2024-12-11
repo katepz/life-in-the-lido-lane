@@ -9,21 +9,17 @@
         <img src="{% static 'images/jubilee.jpg' %}" width="75%" />
         </div>
         <div class="col-8 abeezee-regular">
-        <!-- Title goes between these h2 tags -->
         <h2 class="adlam-display-regular">{{ gallery.title | safe }}</h2>
-        <!-- Content goes directly underneath this -->
         {{ gallery.description | safe }}
         </div>
     </div>
     <div class="row">
     </div>
-    <!-- Displaying user photos -->
+    <!-- Displaying user uploaded photos -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3 class="adlam-display-regular main-text-color">Your photos:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags
-                to iterate through each comment in comments -->
                 {% for photo in photos %}
                 <div class="p-2 comments {% if not photo.is_approved and photo.user_id == user %}faded main-text-color{% elif not photo.is_approved %} d-none{% endif %}">
                 <div class="image-container">
@@ -39,7 +35,6 @@
                             <button type="submit" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this photo?')">Delete</button>
                         </form>
                     {% endif %}
-
                 </div>
                 <div id="comment{{ comment.id }}" class="abeezee-regular main-text-color">
                     {{ photo.user_id }} posted:  {{ photo.caption | safe }}
@@ -50,7 +45,6 @@
                 </p>
                 {% endif %}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>

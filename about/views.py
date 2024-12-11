@@ -5,7 +5,9 @@ from .forms import SuggestionForm
 
 # Create your views here.
 def about_project(request):
-
+    """ 
+    View to render the About page
+    """
     if request.method == "POST":
         suggestion_form = SuggestionForm(data=request.POST)
         if suggestion_form.is_valid():

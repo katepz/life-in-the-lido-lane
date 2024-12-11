@@ -3,8 +3,6 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
-
-
 class SafetyInfo(models.Model):
     title = models.CharField(max_length=255)
     safety_image = CloudinaryField('image', default='placeholder')

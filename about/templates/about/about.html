@@ -6,9 +6,7 @@
 <div class="container mt-5">
     <div class="row">
             <div class="col-12 col-md-8 ">
-            <!-- Title goes between these h2 tags -->
             <h2 class="adlam-display-regular">{{ about.title }}</h2>
-            <!-- Content goes directly underneath this -->
             <p class="abeezee-regular">{{ about.content | safe}}</p>
         </div>
         <div class="col-12 col-md-4 text-center mb-4">
@@ -17,7 +15,6 @@
     </div>
     <div class="row">
         <div class="col text-right">
-            <!-- Updated on field goes in here -->
             <p class="text-end abeezee-regular main-text-color"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
     </div>
@@ -27,8 +24,6 @@
             <p class="abeezee-regular main-text-color">
                 Please fill in the form to suggest any other lidos in the UK that you would like to see added to the list.
             </p>
-            <!-- add your form here. Your submit button should 
-                                have the classes of btn, btn-secondary -->
                 <form id="suggestionForm" method="post" class="abeezee-regular main-text-color">
                     {{ suggestion_form | crispy }}
                     {% csrf_token %}
