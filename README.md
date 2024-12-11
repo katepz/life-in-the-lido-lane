@@ -43,21 +43,17 @@
 ## Overview
 
 ### Purpose
-This project is intended to give a useful site for open water swimmers looking to visit and swim in the UK's wonderful lidos. It will also give up to date safety advice for new and seasoned open water swimmers. Site users have the opportunity to sign up and, when logged in, they can comment on each of the featured lidos, giving details of a visit or asking a question. They will be able to update or delete this input. Once logged in site users will also be able to upload photos of any lido and, once approved these will be displayed on the gallery page. Any site visitor will be able to suggest a lido to feature without the need for signing up.
-A simple approch has been taken to make all lidos easily visible and the site it easy to navigate.
+This project is intended to give a useful site for open water swimmers looking to visit and swim in the UK's wonderful lidos. It will also give up to date safety advice for new and seasoned open water swimmers. Site users have the opportunity to sign up and, when logged in, they can comment on each of the featured lidos, giving details of a visit or asking a question. They will be able to update or delete this input. Once logged in site users will also be able to upload photos of any lido and, once approved these will be displayed on the gallery page. A logged in user will be able to update or delete the images they have uploaded. Safety tips can be suggested by a logged in user and will be displayed when approved. Any site visitor will be able to suggest a lido to feature without the need for signing up.
+A simple approch has been taken to make all lidos easily visible and the site easy to navigate.
 
 ### Target Audience
 Following a huge surge in the popularity of open water swimming, particularly in the post covid period, the number of potential site users is growing rapidly. The main target audience will be existing open water swimmers looking for information on UK lido sites and locations. Smaller audiences will be tourists and families looking for local activities and novice open water swimmers looking for safe environments to begin their swimming journeys.
 
-Users will be able to view information on selected lidos to include: location, season length, costs, other facilities eg cafes/changing areas as well as a brief description.
+Users will be able to view information on selected lidos to include: location, season length, costs, other facilities eg cafes/changing areas as well as a brief description and whether lifeguards are present or not.
 
 ## Design
 
-### User Stories
-
-User stories have been selected to reflect the outline of the project above as well as some possible features for future iterations.
-
-#### Must-Have User Stories
+### Must-Have User Stories
 **User Story 1:** As a site user I can view a list of info cards so that I can choose the one I want to view in more detail.
 - Several posts are displayed on the home page
 
@@ -136,7 +132,7 @@ User stories have been selected to reflect the outline of the project above as w
 - notifications appear after signingin/signing out
 
 
-#### Should-Have User Stories
+### Should-Have User Stories
 **User Story 1:** As a site user I can see paginated info cards so that it is easier to navigate through them.
 
 - Multiple posts are paginated. 
@@ -157,7 +153,7 @@ User stories have been selected to reflect the outline of the project above as w
 - once approved this appears on the safety page.
 
 
-#### Could-Have User Stories
+### Could-Have User Stories
 
 **User Story 1:** As a site user I can add and remove a lido to a wish-list so that I can remember where I would like to go.
 
@@ -190,7 +186,7 @@ User stories have been selected to reflect the outline of the project above as w
 - my uploaded photo appears on the site
 - I can edit or delete my uploaded images
 
-#### Won't-Have User Stories
+### Won't-Have User Stories
 
 **User Story 1:** As a site user I can click on a map link so that I can get directions.
 
@@ -204,7 +200,8 @@ User stories have been selected to reflect the outline of the project above as w
 
 - when the Events link is clicked the events page is displayed.
 
-**Reflection - the User Stories should be condensed into groups relating to the same feature.**
+#### **Reflection**
+The User Stories should be condensed into groups relating to the same feature so that each User Story will have more associated tasks. Fewer User Stories will make it easier to manage the project board 
 
 ### Agile Methodology
 
@@ -267,14 +264,14 @@ Project colours have been adjusted to reflect the new colour palette. Logo files
 
 ### Typography
 
-ADLaM Disply is used for headings and ABeeZee is used for text. ABeeZee is a clean and modern sans-serif font designed for easy readability. It features simple straightforward design with slightly rounded edges. Overall, it is a user-friendly attractive font that can enhance readability. Paired with ADLaM Display it createsan accessible typography system.
+ADLaM Disply is used for headings and ABeeZee is used for text. ABeeZee is a clean and modern sans-serif font designed for easy readability. It features simple straightforward design with slightly rounded edges. Overall, it is a user-friendly attractive font that can enhance readability. Paired with ADLaM Display it creates an accessible typography system.
 
 ### Accessibility Considerations
 Careful consideration given to colour palette, see the section above. Images have alt text attributes and aria labelling means that screen readers will be able to access the site.
 
 ### Database Planning
 
-In order to facilitate ease of implementation of current and future possible features the following ERD was developed for this project. The tables headed with a green cell are for Must Have features, peach cells are for Should Have features and yellow cells are for Could Have features. All but one of these has been used in the initial sprint. The VisitList model may be implemented in a future sprint.
+In order to facilitate ease of implementation of current and future features the following ERD was developed for this project. The tables headed with a green cell are for Must Have features, peach cells are for Should Have features and yellow cells are for Could Have features. All but one of these has been used in the initial sprint. The VisitList model may be implemented in a future sprint.
 
 ![Database ERD](static/images/readme/erd1.JPG)
 
@@ -438,7 +435,7 @@ No errors were found when passing through W3C HTML validator. Some warnings for 
 ![HTML Testing](static/images/readme/htmlvalidation1.JPG)
 
 #### CSS
-No errors were found when passing through W3C HTML validator. Some recommendations for duplicate css classes. This will be tackled in the next sprint. 
+No errors were found when passing through W3C CSS validator. Some recommendations for duplicate css classes. This will be tackled in the next sprint. 
 
 ![CSS Testing](static/images/readme/cssvalidation1.JPG)
 
@@ -499,16 +496,23 @@ As part of the validation process some duplicate CSS classes were identified and
 
 There is an issue with responsivity of the lido detail page on a mobile screen. The page displays with the image underneath the lido name but there is too much space between the image and the text. This would be fixed in a future iteration.
 
+The form for uploading an image on the gallery page appears at the bottom of the images on mobile devices. In a future iteration this form would be underneath the text at the top of the page for a better UX.
+
+The labels for the built in form fields for crispy forms also need styling which will be done in a future sprint.
+
+The issue highlighted on the performance test with image file types will also be addressed in future
+
 
 ## Credits
 ### Code
 - The project is inspired by the Codestar Blog project from the Code Institute LMS and some of the code and processes from that project has been used as a starting point for this one.
-- Django documentation has been used to cross check correct configurations os aspects of the project
+- Django documentation has been used to cross check correct configurations of aspects of the project
 - Chat GPT gave some suggestions for model structure which was adapted to fit the database schema
+- Chat GPT gave some starting code for the implementation of the update/delete functions on the Gallery page
 - Google fonts used for embedded code for typography
 
 ### Content
-- individual lido pages for info and images.
+- individual lido web pages for info and images.
 - unsplash for free to use stock images
 
 ### People
