@@ -23,8 +23,7 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body abeezee-regular">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
+                <!-- The lido description content -->
                 <h2 class="adlam-display-regular">{{ info }}</h2>
                 <p class="card-text main-text-color">
                     {{ lido.description | safe }}
@@ -35,7 +34,7 @@
             </div>
         </div>
     </div>
-    <!-- Displaying count of comments -->
+    <!-- Display count of comments -->
     <div class="row">
         <div class="col-12">
             <strong class="text-secondary">
@@ -51,8 +50,6 @@
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3 class="adlam-display-regular main-text-color">Comments:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags
-                to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="p-2 comments {% if not comment.is_approved and comment.user_id == user %}faded{% elif not comment.is_approved %} d-none{% endif %}">
                 <p class="font-weight-bold main-text-color ">
@@ -73,7 +70,6 @@
                 <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                 {% endif %}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>

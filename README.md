@@ -188,6 +188,7 @@ User stories have been selected to reflect the outline of the project above as w
 
 - a form enables me to upload a photo
 - my uploaded photo appears on the site
+- I can edit or delete my uploaded images
 
 #### Won't-Have User Stories
 
@@ -273,7 +274,7 @@ Careful consideration given to colour palette, see the section above. Images hav
 
 ### Database Planning
 
-In order to facilitate ease of implemantation of current and future possible features the following ERD was developed for this project. The tables headed with a green cell are for Must Have features, peach cells are for Should Have features and yellow cells are for Could Have features. All but one of these has been used in the initial sprint. The VisitList model may be implemented in a future sprint.
+In order to facilitate ease of implementation of current and future possible features the following ERD was developed for this project. The tables headed with a green cell are for Must Have features, peach cells are for Should Have features and yellow cells are for Could Have features. All but one of these has been used in the initial sprint. The VisitList model may be implemented in a future sprint.
 
 ![Database ERD](static/images/readme/erd1.JPG)
 
@@ -317,11 +318,15 @@ As the mock-up generator is not signed in it can not display the logout page so 
 ![View and Suggest Safety Tips](static/images/readme/safetytips1.JPG)
 
 ### Gallery Page: 
-**Add and manage Gallery page. View Gallery page. Upload an image via Gallery page.**
+**Add and manage Gallery page. View Gallery page. Upload an image via Gallery page. Update or delete content on Gallery page**
 
 ![Gallery Page](static/images/readme/gallery1.JPG)
 
 ![Upload an Image](static/images/readme/upload1.JPG)
+
+![Image Options](static/images/readme/imageoptions1.JPG)
+
+![Update an Image](static/images/readme/updateimage.JPG)
 
 ### User Notifications: 
 **Users receive notifications when they interact with the application.**
@@ -336,6 +341,10 @@ As the mock-up generator is not signed in it can not display the logout page so 
 
 ![Upload Notification](static/images/readme/uploadnot1.JPG)
 
+![Update an Image Notification](static/images/readme/updateimagenot1.JPG)
+
+![Delete an Image Notification](static/images/readme/photodeletenot1.JPG)
+
 ### Site Management
 **Apps appear in admin panel**
 
@@ -344,64 +353,65 @@ As the mock-up generator is not signed in it can not display the logout page so 
 ## Technologies Used
 
 ### Planning and Design
-GitHUb - project board
-Lucidchart - ERD for database
-Balsamiq - for wireframe diagrams
-Adobe Color - for palette selection
-Font Forge - for selecting accessible font pairing
-Cloudinary - for hosting images
-Unsplash - for royalty free images
-Google Fonts - custom font styling
-Favicon generator - to produce favicon
-Logo.com - free logo maker
+- GitHUb - project board
+- Lucidchart - ERD for database
+- Balsamiq - for wireframe diagrams
+- Adobe Color - for palette selection
+- Font Forge - for selecting accessible font pairing
+- Cloudinary - for hosting images
+- Unsplash - for royalty free images
+- Google Fonts - custom font styling
+- Favicon generator - to produce favicon
+- Logo.com - free logo maker
+- Techsini.com - mockup generator
 
 ### Languages
-HTML5 - for templates
-CSS3 - for styling
-Python3 - for views, models, logic in templates
-Javascript - update and delete functionality
-Markdown - for README.md
+- HTML5 - for templates
+- CSS3 - for styling
+- Python3 - for views, models, logic in templates
+- Javascript - update and delete functionality
+- Markdown - for README.md
 
 ### Frameworks
-Bootstrap5 - styling & responsiveness
-Django4 - full stack project building
+- Bootstrap5 - styling & responsiveness
+- Django4 - full stack project building
 
 ### Database
-Postgres - supplied via Code Institute
+- Postgres - supplied via Code Institute
 
 ### Development
-Git - for version control
-Gitpod - IDE
-GitHub - set up and management of repo from a CI template, use of project board for planning and agile methodologies, link to heroku for deployment
+- Git - for version control
+- Gitpod - IDE
+- GitHub - set up and management of repo from a CI template, use of project board for planning and agile methodologies, link to heroku for deployment
 
 ### Installed Django Packages
-Cloudinary - image handling
-Allauth - for secure account handling
-Summernote - for improved comment input
-Gunicorn - web serving
-Crispy forms - form use
-Whitenoise - white noise handling
+- Cloudinary - image handling
+- Allauth - for secure account handling
+- Summernote - for improved comment input
+- Gunicorn - web serving
+- Crispy forms - form use
+- Whitenoise - white noise handling
 
 ### Validation and Testing
-HTML - The W3C Markup validation Service
-CSS - The W3C CSS Validation Service
-Python - The Code Institute Python Linter
-Lighthouse
-Wave
+- HTML - The W3C Markup validation Service
+- CSS - The W3C CSS Validation Service
+- Python - The Code Institute Python Linter
+- Lighthouse
+- Wave
+- JS Hint - for JavaScript
 
 ### Deployment
-Heroku 
+- Heroku 
 
 ### AI
-Chatgpt - bug fixing suggestions, assistance in model structure
+- Chatgpt - bug fixing suggestions, assistance in model structure and implementing update and delete on gallery page
 
 
 ## Testing and Validation
-
 ### Manual Testing Results
 The following table shows the results of testing the functionality fo the application.
 
-![Testing Results](static/images/readme/testresults.JPG)
+![Testing Results](static/images/readme/testresultsa.JPG)
 
 All test actions behaved as expected except the responsiveness of the page detailing individual lidos. This has been addressed by adding a media query to display the image underneath the lido name for mobile screen sizes.
 
@@ -437,6 +447,12 @@ Some spacing errors were found and corrected when using the CI Python Linter too
 
 ![Python Testing](static/images/readme/pythonlinterexample1.JPG)
 
+#### Javascript
+No errors found when tested using JS Hint. 
+
+![JS Testing](static/images/readme/jstest1.JPG)
+
+
 ## Deployment
 
 The deployed project can be found at:
@@ -444,7 +460,7 @@ The deployed project can be found at:
 
 This project was deployed to Heroku from the main branch of the Life In The Lido Lane repository on GitHub. 
 
-The project was reployed several times after new features were made functional so that continuous checking of the deployed site could be made and any errors picked up early.
+The project was reployed  after new features were made functional so that continuous checking of the deployed site could be made and any errors picked up early.
 
 ### Pre Deployment
 - requirements.txt file to be up to date with installed Python modules needed for effective deployment
@@ -479,7 +495,7 @@ The main challenges were: integrating experience to date with the new project; c
 ## Future Improvements
 Future improvement will include implementation of the remaining Could Have and Won't Have User Stories from this sprint. This will be a link on each individual Lido page to add it to a visit list that would be stored in the users profile. Also to enhance UX there would be an image carousel on the top of the home page or potentially as a landing page.
 
-As part of the validation process some duplicate CSS classes were identified and these would be adjusted to improve performance. This was not judged to be a priority in this sprint as performance scores were good.
+As part of the validation process some duplicate CSS classes were identified and these would be adjusted to improve performance. This was not judged to be a priority in this sprint as performance scores were good. As well as this the warnings recived from JS Hint will be acted on.
 
 There is an issue with responsivity of the lido detail page on a mobile screen. The page displays with the image underneath the lido name but there is too much space between the image and the text. This would be fixed in a future iteration.
 

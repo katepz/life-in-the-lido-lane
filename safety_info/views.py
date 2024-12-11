@@ -7,7 +7,7 @@ from .forms import SafetySuggestionForm
 def safety_info(request):
 
     """
-    Renders the safety page
+    View to render the safety page
     """
     safetyinfo = SafetyInfo.objects.all().order_by('-created_on').first()
     safetysuggestion = SafetySuggestion.objects.all().order_by("tip")

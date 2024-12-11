@@ -36,7 +36,7 @@ def gallery_page(request):
 @login_required
 def update_photo(request, pk):
     """
-    View to handle updating a photo's caption
+    View to handle updating a photo's caption or the image itself
     """
     photo = get_object_or_404(Photo, pk=pk, user_id=request.user)
     if request.method == "POST":

@@ -12,8 +12,6 @@ class LidoAdmin(SummernoteModelAdmin):
     summernote_fields = ('description',)
 
 
-# Register your models here.
-# admin.site.register(Comment)
 @admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)

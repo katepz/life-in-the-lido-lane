@@ -7,6 +7,7 @@ from .forms import CommentForm
 
 
 # Create your views here.
+
 class LidoList(generic.ListView):
     queryset = Lido.objects.filter(status=1)
     template_name = "lidos/index.html"
@@ -56,7 +57,7 @@ def lido_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    This is a view to edit a comment
     """
     if request.method == "POST":
 
@@ -79,7 +80,7 @@ def comment_edit(request, slug, comment_id):
 
 def comment_delete(request, slug, comment_id):
     """
-    view to delete comment
+    This is a view to delete a comment
     """
     queryset = Lido.objects.filter(status=1)
     lido = get_object_or_404(queryset, slug=slug)
