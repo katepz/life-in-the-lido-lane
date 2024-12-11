@@ -56,7 +56,7 @@
                 {% for comment in comments %}
                 <div class="p-2 comments {% if not comment.is_approved and comment.user_id == user %}faded{% elif not comment.is_approved %} d-none{% endif %}">
                 <p class="font-weight-bold main-text-color ">
-                    {{ comment.user_id }}<span class="font-weight-normal main-text-color abeezee-regular">{{ comment.created_on }}</span> wrote:
+                    {{ comment.user_id }} <span class="font-weight-normal main-text-color abeezee-regular">{{ comment.created_on }}</span> wrote:
                 </p>
                 <div id="comment{{ comment.id }}" class="main-text-color abeezee-regular">
                     {{ comment.content | linebreaks }}

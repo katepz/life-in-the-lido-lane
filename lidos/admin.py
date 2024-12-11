@@ -13,4 +13,8 @@ class LidoAdmin(SummernoteModelAdmin):
 
 
 # Register your models here.
-admin.site.register(Comment)
+# admin.site.register(Comment)
+@admin.register(Comment)
+class CommentAdmin(SummernoteModelAdmin):
+    summernote_fields = ('content',)
+    list_display = ('user_id', 'is_approved')

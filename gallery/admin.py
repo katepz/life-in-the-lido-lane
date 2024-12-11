@@ -13,4 +13,4 @@ class PhotoAdmin(SummernoteModelAdmin):
 class GalleryPageAdmin(SummernoteModelAdmin):
 
     summernote_fields = ('title', 'description',)
-    display_list = list_display = ('title', 'created_on')
+    list_display = ('title', 'created_on')

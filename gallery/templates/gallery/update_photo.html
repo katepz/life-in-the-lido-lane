@@ -1,0 +1,12 @@
+{% extends "base.html" %} 
+{% block content %}
+<div class="container abeezee-regular main-text-color">
+  <h2 class="adlam-display-regular">Update</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn-signup" type="submit">Update</button>
+  </form>
+  <a href="{% url 'gallery' %}">Cancel</a>
+</div>
+{% endblock %}

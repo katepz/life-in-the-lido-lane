@@ -32,6 +32,14 @@
                     {% else %}
                     <img class="card-img-top" src=" {{ photo.image.url }}" alt="{{ photo.caption }}">
                     {% endif %}
+                    {% if request.user == photo.user_id %}
+                        <a href="{% url 'update_photo' photo.id %}" class="btn btn-signup">Update</a>
+                        <form action="{% url 'delete_photo' photo.id %}" method="POST" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this photo?')">Delete</button>
+                        </form>
+                    {% endif %}
+
                 </div>
                 <div id="comment{{ comment.id }}" class="abeezee-regular main-text-color">
                     {{ photo.user_id }} posted:  {{ photo.caption | safe }}
