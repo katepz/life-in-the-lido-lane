@@ -6,22 +6,22 @@
 1. [Overview](#overview)
     - [Purpose](#purpose)
     - [Target Audience](#target-audience)
-2. [Design](#design)
+2. [ UX Design and Planning](#ux-design-and-planning)
     - [User Stories](#user-stories)
-    - [Agile Methodology](#agile-methodology)
     - [Wireframes](#wireframes)
     - [Colour Palette](#colour-palette)
     - [Typography](#typography)
     - [Accessibility Considerations](#accessibility-considerations)
     - [Database Planning](#database-planning)
-3. [Features Implementation](#features-implementation)
+3. [Agile Methodology](#agile-methodology)
+4. [Features Implementation](#features-implementation)
     - [Home Page](#home-page)
     - [Account Features](#account-features)
     - [About Page](#about-page)
     - [Safety Page](#safety-page)
     - [Gallery Page](#gallery-page)
     - [User Notifications](#user-notifications)
-4. [Technologies Used](#technologies-used)
+5. [Technologies Used](#technologies-used)
     - [Planning and Design](#planning-and-design)
     - [Languages](#languages)
     - [Frameworks](#frameworks)
@@ -31,14 +31,17 @@
     - [Validation and Testing](#validation-and-testing)
     - [Deployment](#deployment)
     - [AI](#ai)
-5. [Testing and Validation](#testing-and-validation)
+6. [Testing and Validation](#testing-and-validation)
     - [Manual Testing Results](#manual-testing-results)
     - [Lighthouse Testing Results](#lighthouse-testing-results)
     - [Wave Accessibility Testing](#wave-accessibility-testing)
     - [Validation](#validation)
-6. [Deployment](#deployment)
+7. [Deployment](#deployment)
     - [Pre Deployment](#pre-deployment)
     - [Deployment Steps](#deployment-steps)
+8. [Reflection on Development Process](#reflection-on-development-process)
+9. [Future Improvements](#future-improvements)
+10. [Credits](#credits)
 
 ## Overview
 
@@ -51,7 +54,7 @@ Following a huge surge in the popularity of open water swimming, particularly in
 
 Users will be able to view information on selected lidos to include: location, season length, costs, other facilities eg cafes/changing areas as well as a brief description and whether lifeguards are present or not.
 
-## Design
+## UX Design and Planning
 
 ### Must-Have User Stories
 **User Story 1:** As a site user I can view a list of info cards so that I can choose the one I want to view in more detail.
@@ -203,21 +206,6 @@ Users will be able to view information on selected lidos to include: location, s
 #### **Reflection**
 The User Stories should be condensed into groups relating to the same feature so that each User Story will have more associated tasks. Fewer User Stories will make it easier to manage the project board 
 
-### Agile Methodology
-
-An agile working methodology was used during the project with a GitHub project board being the basis of this method.
-
-[Project board link](https://github.com/users/katepz/projects/5)
-
-This completed sprint involved the completion of 24 items. The MoSCoW approach to prioritisation was used to ensure that the MVP was completed in good time. Initially all items were placed in the Backlog and as they were moved to To Do, In Progress and Done columns in the board the milestone was changed for a visual check on the progress of the project. Of the 24 items completed 16 had been designated as Must Haves, 4 as Should Haves and 4 as Could Haves. 2 Could Haves remain in the Backlog for a future sprint as well as 3 items that were designated as Won't Haves as they were beyond the scope of the initial project. As in the refelection above, User Stories could have been grouped better by the feature that they relate to.
-
-#### Images of the Project Board 
-##### In Progress:
-![Project Board in Progress](static/images/readme/Projectboard1.JPG)
-
-##### Completed:
-![Project Board Completed](static/images/readme/Projectboard2.JPG)
-
 ### Wireframes
 Original wireframing has been largely adhered to with some extra images added to improve UX. Images show wireframes for laptop and mobile devices.
 
@@ -274,6 +262,21 @@ Careful consideration given to colour palette, see the section above. Images hav
 In order to facilitate ease of implementation of current and future features the following ERD was developed for this project. The tables headed with a green cell are for Must Have features, peach cells are for Should Have features and yellow cells are for Could Have features. All but one of these has been used in the initial sprint. The VisitList model may be implemented in a future sprint.
 
 ![Database ERD](static/images/readme/erd1.JPG)
+
+## Agile Methodology
+
+An agile working methodology was used during the project with a GitHub project board being the basis of this method.
+
+[Project board link](https://github.com/users/katepz/projects/5)
+
+This completed sprint involved the completion of 24 items. The MoSCoW approach to prioritisation was used to ensure that the MVP was completed in good time. Initially all items were placed in the Backlog and as they were moved to To Do, In Progress and Done columns in the board the milestone was changed for a visual check on the progress of the project. Of the 24 items completed 16 had been designated as Must Haves, 4 as Should Haves and 4 as Could Haves. 2 Could Haves remain in the Backlog for a future sprint as well as 3 items that were designated as Won't Haves as they were beyond the scope of the initial project. As in the refelection above, User Stories could have been grouped better by the feature that they relate to.
+
+### Images of the Project Board 
+#### In Progress:
+![Project Board in Progress](static/images/readme/Projectboard1.JPG)
+
+#### Completed:
+![Project Board Completed](static/images/readme/Projectboard2.JPG)
 
 ## Features Implementation
 
@@ -500,20 +503,20 @@ The form for uploading an image on the gallery page appears at the bottom of the
 
 The labels for the built in form fields for crispy forms also need styling which will be done in a future sprint.
 
-The issue highlighted on the performance test with image file types will also be addressed in future
+The issue highlighted on the performance test with image file types will also be addressed in future.
 
 
 ## Credits
 ### Code
-- The project is inspired by the Codestar Blog project from the Code Institute LMS and some of the code and processes from that project has been used as a starting point for this one.
+- The project is inspired by the Codestar Blog project from the Code Institute LMS and some of the code and processes from that project has been used as a starting point for this one
 - Django documentation has been used to cross check correct configurations of aspects of the project
 - Chat GPT gave some suggestions for model structure which was adapted to fit the database schema
-- Chat GPT gave some starting code for the implementation of the update/delete functions on the Gallery page
+- Chat GPT gave some ideas for the implementation of the update/delete functions on the Gallery page
 - Google fonts used for embedded code for typography
 
 ### Content
-- individual lido web pages for info and images.
-- unsplash for free to use stock images
+- Individual lido web pages for info and images
+- Unsplash for free to use stock images
 
 ### People
 - John and Roo on the Code Institute  Coding Coach Channel for expert help when needed
